@@ -1,0 +1,2618 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Partner Perspectives 2020</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/partner-perspectives.css">
+    <!--Google Font-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <!--AOS Animation Library-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        body {
+            overflow-y: scroll;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .smallcap-logo {
+            max-width: 215px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        /*CSS Only Responsive Menu */
+        .sc-navigation {
+            position: fixed;
+            width: 100%;
+            z-index: 3;
+            /* margin-left: -20px;*/
+            background: url('images/navigation-bg.png');
+            background-repeat: no-repeat;
+        }
+
+        @media(max-width:48em) {
+            .sc-navigation {
+                padding-bottom: 6px;
+            }
+        }
+
+        .sc-navigation ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            overflow: hidden;
+        }
+
+        .sc-navigation li a {
+            display: block;
+            text-decoration: none;
+
+            color: #fff;
+            padding: 13px 30px;
+            text-align: center;
+            border-bottom: 1px solid #fff;
+        }
+
+        .sc-navigation li a:hover {
+            color: #F4B223;
+        }
+
+        .sc-navigation li a:active,
+        .sc-navigation li a.active {
+            font-weight: bold;
+            color: #F4B223;
+        }
+
+        /* menu */
+        .sc-navigation .menu {
+            clear: both;
+            max-height: 0;
+            transition: max-height 0.2s ease-out;
+        }
+
+        /* menu icon */
+        .sc-navigation .menu-icon {
+            cursor: pointer;
+            display: inline-block;
+            float: right;
+            padding: 20px;
+            position: relative;
+            user-select: none;
+            margin-top: -41px;
+        }
+
+        .sc-navigation .menu-icon .navicon {
+            background: #FFF;
+            display: block;
+            height: 2px;
+            position: relative;
+            transition: background 0.2s ease-out;
+            width: 18px;
+        }
+
+        .sc-navigation .menu-icon .navicon:before,
+        .sc-navigation .menu-icon .navicon:after {
+            background: #FFF;
+            content: "";
+            display: block;
+            height: 100%;
+            position: absolute;
+            transition: all 0.2s ease-out;
+            width: 100%;
+        }
+
+        .sc-navigation .menu-icon .navicon:before {
+            top: 5px;
+        }
+
+        .sc-navigation .menu-icon .navicon:after {
+            top: -5px;
+        }
+
+        /* menu btn */
+        .sc-navigation .menu-btn {
+            display: none;
+        }
+
+        .sc-navigation .menu-btn:checked~.menu {
+            max-height: 240px;
+        }
+
+        .sc-navigation .menu-btn:checked~.menu-icon .navicon {
+            background: transparent;
+        }
+
+        .sc-navigation .menu-btn:checked~.menu-icon .navicon:before {
+            transform: rotate(-45deg);
+        }
+
+        .sc-navigation .menu-btn:checked~.menu-icon .navicon:after {
+            transform: rotate(45deg);
+        }
+
+        .sc-navigation .menu-btn:checked~.menu-icon:not(.steps) .navicon:before,
+        .sc-navigation .menu-btn:checked~.menu-icon:not(.steps) .navicon:after {
+            top: 0;
+        }
+
+        /*ipads and small tablets */
+        @media only screen and (min-device-width: 768px) and (max-device-width: 972px) {
+            .sc-navigation .smallcap-logo {
+                margin-top: 2rem;
+            }
+        }
+
+        /*iphones and phones */
+        @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+            .sc-navigation .smallcap-logo {
+                margin-top: 2rem;
+            }
+        }
+
+        @media (min-width: 769px) {
+
+            /*Carillon Logo */
+            .smallcap-logo {
+                display: inline-block;
+                margin-bottom: 2rem;
+                margin-left: 3rem;
+                padding-left: 16px;
+            }
+
+            .sc-navigation li {
+                float: left;
+            }
+
+            .sc-navigation li:last-child {
+                border-right: none;
+            }
+
+            .sc-navigation li a {
+                padding: 20px 30px;
+                text-align: center;
+                border-bottom: none;
+            }
+
+            .sc-navigation li a::after:last-child {
+                border-right: none;
+            }
+
+            .sc-navigation .menu {
+                clear: none;
+                float: right;
+                max-height: none;
+            }
+
+            .sc-navigation .menu-icon {
+                display: none;
+            }
+        }
+
+        /*Ipad and tablet devices */
+        @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+            section#top.sc-navigation {
+                /* margin-left: -30px;*/
+            }
+        }
+
+        /*xLarge Screens and Devices */
+        @media(min-width:120em) {
+            .smallcap-logo {
+                max-width: 315px;
+            }
+
+            .sc-navigation li a {}
+        }
+
+        /* Momentum Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .card {
+
+            border: 0;
+            border-radius: 0;
+        }
+
+        /* Removing Bootstrap 3 col-xs Margins */
+        div.rich-text div.col-xs-12 {
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+        }
+
+        .cta-zoom {
+            transition: transform .4s;
+        }
+
+        .cta-zoom:hover {
+            -ms-transform: scale(1.05);
+            /* IE 9 */
+            -webkit-transform: scale(1.05);
+            /* Safari 3-8 */
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body class="partner-perspectives">
+
+    <header>
+        <section class="sc-navigation" id="top" style="z-index: 6;">
+            <div class="container">
+                <a href="https://www.carillontower.com/" target="_blank">
+                    <img class="smallcap-logo" src="images/carillon-logo-wht.png" alt="Carillon Tower Advisors" />
+                </a>
+                <input class="menu-btn" type="checkbox" id="menu-btn" />
+                <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+                <ul class="menu">
+                    <li><a href="#volatility">Volatility</a></li>
+                    <li><a href="#tradewar">Trade War/Tariffs</a></li>
+                    <li><a href="#election">2020 Election</a></li>
+                    <li><a href="#federal-reserve">Federal Reserve</a></li>
+                    <li><a href="#growth">Growth vs. Value</a></li>
+                </ul>
+            </div>
+        </section>
+    </header>
+    <div class="jumbotron">
+        <div class="container partner-purple-text">
+            <h1 data-aos="fade-down" data-aos-delay="50" data-aos-duration="2100" class="text-center text-uppercase">
+                <strong>Partner</strong> Perspectives</h1>
+            <hr>
+            <h2 data-aos="fade-down" data-aos-delay="50" data-aos-duration="1750" class="text-center">2020 Outlook</h2>
+        </div>
+    </div>
+    <section class="section-intro-text" style="margin-bottom: 300px;">
+        <div class="container">
+            <p class="text-center mt-5">At Carillon Tower Advisers, we bring together an array of knowledgeable,
+                independent investment teams from our affiliates to focus on their best ideas. Here, they offer insights
+                on important topics for investors to consider in 2020. </p>
+            <h3 class="text-center mb-5">Choose a topic to learn more, or <a class="readmore-link download-outlook"
+                    href="https://www.carillontower.com/-/media/rj/affiliate-sites/carillon-tower/pdfs/partner-perspectives-2020-outlook-cta.pdf?la=en"
+                    target="_blank">read our full
+                    outlook</a>.</h3>
+        </div>
+    </section>
+    <section class="section-volatility rellax" id="volatility">
+        <div class="container">
+            <div class="row ">
+                <h2 class="mb-5 ml-3"> <strong>&nbsp;Volatility</strong></h2>
+            </div>
+            <div class="row" style="position: relative;">
+                <div class="col-lg-6 ">
+
+                    <div class="card quote-card shadow-lg cta-zoom rellax" data-rellax-percentage="-0.3">
+                        <div class="card-body">
+                            <h5 class="card-title text-uppercase partner-purple-text ml-lg-5 mt-lg-4"><strong>Eagle
+                                    Asset
+                                    Management
+                                    Equity
+                                    Income Team</strong></h5>
+                            <p class="card-text cta-gray-text ml-lg-5">“It is clear we are not in the extremely
+                                elevated
+                                volatility market of
+                                2009, nor are we in the depressed volatility market of 2017. Just about average — even
+                                though it doesn’t feel that way.” </p>
+                            <p class="ml-lg-5">
+                                <a data-toggle="modal" data-target="#volatilityEagleModal"
+                                    class="text-uppercase readmore-link"><strong>Read
+                                        More <em class="fa fa-chevron-right"></em></strong></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="volatilityEagleModal" tabindex="-1" role="dialog"
+                    aria-labelledby="volatilityEagleModalScrollableTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-xl" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-3">
+                                            <div class="card modal-card ml-lg-n5">
+                                                <div class="card-body">
+                                                    <img class="mb-4 ml-lg-5" src="images/eagle-logo.png"
+                                                        alt="Eagle Asset Management Logo">
+                                                    <p class="cta-gray-text ml-lg-5">“It is clear we are not in the
+                                                        extremely
+                                                        elevated volatility
+                                                        market of 2009, nor are we in the depressed volatility market of
+                                                        2017. Just about average — even though it doesn’t feel that
+                                                        way.”</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <h5 class="modal-title partner-purple-text mb-4">
+                                                <strong>Volatility</strong></h5>
+                                            <p class="text-uppercase cta-steel-text"><strong>Eagle Equity Income
+                                                    Team</strong></p>
+                                            <h6 class="partner-purple-text mb-4">With continued trade uncertainty, slow
+                                                global
+                                                economic growth, and the U.S.
+                                                heading into a presidential election year, do you see headline
+                                                volatility
+                                                remaining elevated in 2020? Are there any specific sectors/industries or
+                                                investment themes that you believe could benefit in this environment?
+                                                How,
+                                                if at all, do you position around this?</h6>
+                                            <p class="cta-gray-text">Market participants have always had to deal with
+                                                headline
+                                                volatility. We
+                                                think it may be a psychological phenomenon that we look back and pine
+                                                for
+                                                the days that were simpler and calmer. But if we are honest with
+                                                ourselves,
+                                                there has never been a time without turmoil. Clearly, we have been in an
+                                                extended period where the old adage “the market climbs a wall of worry”
+                                                has
+                                                reigned. We like to say that this is the most unloved bull market in
+                                                history. </p>
+                                            <p class="cta-gray-text">If we look at volatility mathematically, by
+                                                analyzing
+                                                movements in the CBOE
+                                                Market Volatility Index (VIX), we find that volatility in 2019 is
+                                                slightly
+                                                below the average for the last 10 years. We understand the limitations
+                                                of
+                                                looking at the average, as it is really the spikes in the index that
+                                                cause
+                                                angst in the market. Looking at it visually, it is clear we are not in
+                                                the
+                                                extremely elevated volatility market of 2009, nor are we in the
+                                                depressed
+                                                volatility market of 2017. Just about average— even though it doesn’t
+                                                feel
+                                                that way.
+                                            </p>
+                                            <p class="cta-gray-text">Our strategy seeks to reduce volatility in our
+                                                clients’
+                                                portfolios in all
+                                                types of market scenarios. To achieve our goals, we strive to create a
+                                                diversified portfolio across industries. While we constantly search for
+                                                the
+                                                best risk vs. reward outcome for our clients, which may result in over-
+                                                and
+                                                under-weighted industries, our focus is on maintaining a balanced
+                                                portfolio
+                                                of high-quality stocks.</p>
+
+                                            <p class="disclosures-text">All investments are subject to risk. Asset
+                                                allocation and diversification do not ensure a profit or protect against
+                                                a
+                                                loss. There is no assurance that any investment strategy will be
+                                                successful
+                                                or that any securities transaction, holdings, sectors or allocations
+                                                discussed will be profitable.</p>
+                                            <p class="disclosures-text">This material may include forward-looking
+                                                statements. These statements are not historical facts, but instead
+                                                represent
+                                                only beliefs regarding future events, many of which, by their nature,
+                                                are
+                                                inherently uncertain. You should not place undue reliance on
+                                                forward-looking
+                                                statements as it is possible that actual results and financial
+                                                conditions
+                                                may differ, possibly materially, from the anticipated results and
+                                                financial
+                                                conditions indicated in these forward-looking statements.</p>
+                                            <p class="disclosures-text">The information contained within does not
+                                                represent
+                                                a recommendation to buy, hold or sell any security and it should not be
+                                                assumed that the securities transactions or holdings discussed were or
+                                                will
+                                                prove to be profitable. All holdings are subject to change daily. The
+                                                information presented is not tax, investment or legal advice.
+                                                Prospective
+                                                investors should consult with their advisors.
+                                            </p>
+                                            <p class="disclosures-text">The Chicago Board of Exchange (BOE) Market
+                                                Volatility Index, or “VIX,” is a popular measure of the stock market's
+                                                expectation of volatility implied by S&P 500 index options.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End Modal-->
+
+                <div class="col">
+                    <div class="card shadow-lg partner-purple-bg cta-zoom rellax" data-rellax-percentage="-0.3">
+                        <div class="card-body">
+                            <h5 class="card-title text-uppercase"><strong>Scout Investments Mid Cap
+                                    Equity Team</strong></h5>
+                            <p class="card-text cta-steel-text">“We do expect volatile political and trade headlines in
+                                2020 and beyond.” </p>
+                            <p>
+                                <a data-toggle="modal" data-target="#volatilityScoutModal"
+                                    class="text-uppercase readmore-link"><strong>Read More <em
+                                            class="fa fa-chevron-right"></em></strong></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="volatilityScoutModal" tabindex="-1" role="dialog"
+                    aria-labelledby="volatilityScoutModalScrollableTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-xl" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-3">
+                                            <div class="card modal-card ml-lg-n5">
+                                                <div class="card-body">
+                                                    <img class="mb-4 ml-lg-5" src="images/scout-logo.png"
+                                                        alt="Scout Investments">
+                                                    <p class="cta-gray-text ml-lg-5">We do expect volatile political
+                                                        and trade headlines in 2020 and beyond.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <h5 class="modal-title partner-purple-text mb-4">
+                                                <strong>Volatility</strong></h5>
+                                            <p class="text-uppercase cta-steel-text"><strong>Scout Mid Cap Equity
+                                                    Team</strong></p>
+                                            <h6 class="partner-purple-text mb-4">With continued trade uncertainty, slow
+                                                global economic growth, and the U.S. heading into a presidential
+                                                election year, do you see headline volatility remaining elevated in
+                                                2020? Are there any specific sectors/industries or investment themes
+                                                that you believe could benefit in this environment? How, if at all, do
+                                                you position around this?</h6>
+                                            <p class="cta-gray-text">We do expect volatile political and trade headlines
+                                                in 2020 and beyond. Our current view is that the economic expansion in
+                                                the United States will continue into at least 2021. Bolstering this view
+                                                is the new easier attitude at the Federal Reserve (Fed), which
+                                                promulgated three recent interest rate cuts, a marked reversal from the
+                                                ill-timed interest rate hikes in September and December 2018.
+                                            </p>
+                                            <p class="cta-gray-text">We viewed those hikes as unnecessary due to a lack
+                                                of inflationary pressures and growing economic risks from trade issues
+                                                and high global debt levels that amplify the impact of interest rate
+                                                hikes. With global total debt levels near $246 trillion as of the first
+                                                quarter of 2019, according to Axios.com, interest rate hikes have a more
+                                                profound negative impact on growth as the interest expense burden on the
+                                                world increases sharply with rate hikes.
+
+                                            </p>
+                                            <p class="cta-gray-text">We have exposure to economically sensitive stocks,
+                                                with a preference for companies that have strong pricing power and solid
+                                                competitive advantages, such as selected software, semiconductor, and
+                                                industrial names. Many software names are growing rapidly due to a shift
+                                                toward cloud computing, and selected semiconductors are expected to
+                                                benefit from the potential growth of 5G wireless networks, the Internet
+                                                of Things (IoT), artificial intelligence, and more electronics in motor
+                                                vehicles. We view these long-term trends as less subservient to trade
+                                                outcomes. We own selected, innovative industrial companies levered to
+                                                the treatment of drinking and wastewater; growth in composite materials
+                                                in aircraft; prioritized areas of the defense budget; auto auctions; and
+                                                increased use of data services and consulting. Our healthcare companies
+                                                help treat genetic disorders, and provide medical devices for cardiac or
+                                                urological care for an aging population. Cruising remains a popular and
+                                                growing leisure activity with better prospects due to more accommodative
+                                                monetary policy and favorable fuel prices.</p>
+
+                                            <p class="disclosures-text">All investments are subject to risk. Asset
+                                                allocation and diversification do not ensure a profit or protect against
+                                                a loss. There is no assurance that any investment strategy will be
+                                                successful or that any securities transaction, holdings, sectors or
+                                                allocations discussed will be profitable.
+                                            </p>
+                                            <p class="disclosures-text">This material may include forward-looking
+                                                statements. These statements are not historical facts, but instead
+                                                represent only beliefs regarding future events, many of which, by their
+                                                nature, are inherently uncertain. You should not place undue reliance on
+                                                forward-looking statements as it is possible that actual results and
+                                                financial conditions may differ, possibly materially, from the
+                                                anticipated results and financial conditions indicated in these
+                                                forward-looking statements.
+                                            </p>
+                                            <p class="disclosures-text">The information contained within does not
+                                                represent a recommendation to buy, hold or sell any security and it
+                                                should not be assumed that the securities transactions or holdings
+                                                discussed were or will prove to be profitable. All holdings are subject
+                                                to change daily. The information presented is not tax, investment or
+                                                legal advice. Prospective investors should consult with their advisors.
+
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End Modal-->
+
+                <div class="col">
+                    <div class="card shadow-lg background-grey cta-zoom rellax" data-rellax-percentage="-0.3">
+                        <div class="card-body">
+                            <h5 class="card-title text-uppercase"><strong>Scout Investments Small
+                                    Cap Equity Team</strong></h5>
+                            <p class="card-text">“Our team definitely believes that higher volatility will
+                                favor quality.” </p>
+                            <p>
+                                <a data-toggle="modal" data-target="#volatilityScoutSmallCapModal"
+                                    class="text-uppercase readmore-link"><strong>Read More <em
+                                            class="fa fa-chevron-right"></em></strong></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="volatilityScoutSmallCapModal" tabindex="-1" role="dialog"
+            aria-labelledby="volatilityScoutSmallCapModalScrollableTitle" aria-hidden="true">
+            <div class="modal-dialog modal-xl" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-3">
+                                    <div class="card modal-card ml-lg-n5">
+                                        <div class="card-body">
+                                            <img class="mb-4 ml-lg-5" src="images/scout-logo.png"
+                                                alt="Scout Investments">
+                                            <p class="cta-gray-text ml-lg-5">Our team definitely believes that higher
+                                                volatility will favor quality.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <h5 class="modal-title partner-purple-text mb-4">
+                                        <strong>Volatility</strong></h5>
+                                    <p class="text-uppercase cta-steel-text"><strong>Scout Small Cap Equity
+                                            Team</strong></p>
+                                    <h6 class="partner-purple-text mb-4">After a long period where low quality stocks
+                                        were outperforming higher quality, profitable companies with strong balance
+                                        sheets have started to break away from lower-quality stocks. What factors have
+                                        led to this shift and do you believe this trend will continue?</h6>
+
+                                    <p class="cta-gray-text">Our team definitely believes that higher volatility will
+                                        favor quality. When we get more volatility in the markets, investors flee to
+                                        safety. When it comes to equities, they tend to look for profitable business
+                                        with good returns and cleaner balance sheets. We saw a great example of this in
+                                        September when quality began to outperform and profitable businesses
+                                        significantly outperformed non-earners.
+                                    </p>
+
+
+                                    <p class="disclosures-text">All investments are subject to risk. Asset allocation
+                                        and diversification do not ensure a profit or protect against a loss. There is
+                                        no assurance that any investment strategy will be successful or that any
+                                        securities transaction, holdings, sectors or allocations discussed will be
+                                        profitable.
+
+                                    </p>
+                                    <p class="disclosures-text">This material may include forward-looking statements.
+                                        These statements are not historical facts, but instead represent only beliefs
+                                        regarding future events, many of which, by their nature, are inherently
+                                        uncertain. You should not place undue reliance on forward-looking statements as
+                                        it is possible that actual results and financial conditions may differ, possibly
+                                        materially, from the anticipated results and financial conditions indicated in
+                                        these forward-looking statements.
+
+                                    </p>
+                                    <p class="disclosures-text">The information contained within does not represent a
+                                        recommendation to buy, hold or sell any security and it should not be assumed
+                                        that the securities transactions or holdings discussed were or will prove to be
+                                        profitable. All holdings are subject to change daily. The information presented
+                                        is not tax, investment or legal advice. Prospective investors should consult
+                                        with their advisors.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--End Modal-->
+    </section>
+    <section class="section-downloads">
+        <div class="container">
+            <h3 class="text-center">
+                <a href="https://www.carillontower.com/-/media/rj/affiliate-sites/carillon-tower/pdfs/partner-perspectives-2020-outlook-cta.pdf?la=en"
+                    target="_blank" class="text-uppercase readmore-link download-outlook"><strong>download our complete
+                        2020
+                        outlook <em class="fa fa-chevron-right"></em></strong></a>
+            </h3>
+            <p class="text-center">Read insights from all 11 portfolio teams.</p>
+        </div>
+    </section>
+    <section class="section-trade-war" id="tradewar">
+        <div class="container">
+            <div class="row">
+                <h2 class="mb-5 ml-3"><strong>Trade War/Tariffs</strong></h2>
+            </div>
+            <div class="row mb-4">
+                <div class="col">
+                    <div class="card shadow-lg partner-purple-bg cta-zoom">
+                        <div class="card-body">
+                            <h5 class="card-title text-uppercase"><strong>Reams Asset Management</strong></h5>
+                            <p class="card-text">“China has been hurt more by the trade war than the U.S. has, but China
+                                has also dug in and does not seem willing to ‘lose’ on a deal.” </p>
+                            <p>
+                                <a data-toggle="modal" data-target="#reamsTradeWarModal"
+                                    class="text-uppercase readmore-link"><strong>Read More <em
+                                            class="fa fa-chevron-right"></em></strong></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="reamsTradeWarModal" tabindex="-1" role="dialog"
+                    aria-labelledby="reamsTradeWarModalTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-xl" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-3">
+                                            <div class="card modal-card ml-lg-n5">
+                                                <div class="card-body">
+                                                    <img class="mb-4 ml-lg-5" src="images/reams-2.png"
+                                                        alt="Reams Asset Management">
+                                                    <p class="cta-gray-text ml-lg-5">China has been hurt more by the
+                                                        trade war than the U.S. has, but China has also dug in and does
+                                                        not seem willing to ‘lose’ on a deal..</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <h5 class="modal-title partner-purple-text mb-4">
+                                                <strong>Trade War/Tariffs</strong></h5>
+                                            <p class="text-uppercase cta-steel-text"><strong>Reams Asset
+                                                    Management</strong></p>
+                                            <h6 class="partner-purple-text mb-4">What macroeconomic factors should
+                                                investors be watching and why?</h6>
+
+                                            <p class="cta-gray-text">It is clear that global growth has slowed due to a
+                                                variety of factors. The U.S.-China trade war and lingering Brexit
+                                                overhang, despite some recent improvements on both fronts, are the most
+                                                obvious proximal causes. We also believe the impact of the Fed’s
+                                                tightening cycle was not fully appreciated while it was ongoing, as the
+                                                effects were being somewhat masked and offset by fiscal stimulus
+                                                stemming from the 2017 tax cuts.
+
+                                            </p>
+                                            <p class="cta-gray-text">As the fourth quarter of 2018 began, the Fed was
+                                                contemplating more rate increases and balance sheet reduction was on
+                                                “autopilot” despite signs that growth and inflation were already
+                                                decelerating. The abrupt policy shift and subsequent “mid-cycle
+                                                adjustment” of three 25 bps rate cuts have blunted the impact of the
+                                                slowdown and reduced the likelihood of a U.S recession. Europe is still
+                                                in a perilous state, however, as Germany, France, and Italy are all
+                                                flirting with recessions. China has also been employing all manner of
+                                                fiscal and monetary stimulus to keep its growth rate above 6%, but
+                                                continues to print disappointing economic numbers.
+
+                                            </p>
+
+                                            <p class="cta-gray-text">The key question is: Can the U.S. consumer hold up
+                                                long enough for the manufacturing sector to recover? U.S. and Eurozone
+                                                manufacturing PMIs have both weakened notably and are now below 50,
+                                                indicating contraction, while China’s PMI has been (suspiciously)
+                                                hovering around 50 for the past year with little variability. Global
+                                                services PMIs, which are less exposed to the dual threats of the
+                                                U.S.-China trade war and Brexit, have proven more resilient and remain
+                                                in expansion territory. The U.S. consumer, buoyed by historically low
+                                                unemployment, has been one of the only bright spots globally.
+
+                                            </p>
+
+                                            <p class="cta-gray-text">The overriding hope is that a comprehensive trade
+                                                deal gets done before the consumer rolls over and potentially tips the
+                                                U.S. into a recession. There are a couple of issues, however, with this
+                                                otherwise bullish scenario. First, although market participants are
+                                                concerned about the U.S.-China trade war, some sort of favorable
+                                                resolution appears to be largely priced in at this point. This is
+                                                similar to the situation earlier in 2019, when a breakdown in talks
+                                                between the U.S. and China roiled markets in May. The reaction to these
+                                                developments made it clear that the consensus belief was that a deal was
+                                                inevitable, and markets seem to believe that to be the case once again.
+
+                                            </p>
+
+                                            <p class="cta-gray-text">Second, a quick fix to this issue may not actually
+                                                exist. “Phase one” of a trade deal is expected to be signed in early
+                                                January, although certain details have yet to be released. In the main,
+                                                additional tariffs set to go into effect on December 15 were avoided,
+                                                the U.S. agreed to reduce tariffs on $120 billion of Chinese goods, and
+                                                China agreed to import more U.S. goods, primarily agricultural products.
+                                                This is not a comprehensive trade deal, however, and should be viewed
+                                                more like a temporary armistice than a lasting peace treaty. Some of the
+                                                near-term tail risk has been reduced, but there are still a number of
+                                                critical long-term issues that need to be addressed.
+
+                                            </p>
+
+                                            <p class="cta-gray-text">China has been hurt more by the trade war than the
+                                                U.S. has, but China has also dug in and does not seem willing to “lose”
+                                                on a deal with the U.S. Similarly, the Trump administration cannot
+                                                stomach a deal that appears to capitulate to China. Inking a minor deal
+                                                heading into an election year turns down the heat a bit and lowers U.S.
+                                                recession risk, which is certainly desirable from President Trump’s
+                                                standpoint.
+                                            </p>
+
+                                            <p class="cta-gray-text">That is perhaps all we should expect until after
+                                                the 2020 presidential election, however, and there will undoubtedly be
+                                                more ups and downs along the way. The U.S. has more leverage on the
+                                                actual terms of trade since it represents a much higher percentage of
+                                                China’s exports than vice versa, but China has time on its side and a
+                                                radically different political economy. President Xi Jinping certainly
+                                                faces some internal pressures, but China can afford to wait out the U.S.
+                                                election cycle before signing a comprehensive trade deal. They can bide
+                                                their time either to apply more negotiating pressure as election day
+                                                approaches, or with a view towards picking up talks with potentially a
+                                                new incoming administration that would likely be less adversarial. So in
+                                                our view, it is entirely possible that trade tensions between the two
+                                                largest economies in the world will persist longer than many are
+                                                projecting.
+                                            </p>
+                                            <p class="cta-gray-text">Speaking of the U.S. presidential election, this
+                                                particular one is setting up to have a larger than normal impact on bond
+                                                markets. Aside from President Trump winning re-election or not, a lot
+                                                depends on who becomes the Democratic candidate. Barring any surprises
+                                                we are likely to have a status-quo moderate, but there is potential for
+                                                a progressive candidate in either Elizabeth Warren or Bernie Sanders. If
+                                                Warren or Sanders is the Democratic nominee, we would expect heightened
+                                                market volatility leading up to the election. Either of these candidates
+                                                would be viewed as broadly negative for business and markets (in
+                                                contrast to a more centrist Democratic candidate), and sectors such as
+                                                healthcare, financials, and energy could suffer disproportionately based
+                                                on the two progressive candidates’ likely policy agendas, if elected.
+                                            </p>
+                                            <p class="cta-gray-text">Should Warren or Sanders win, we can also expect
+                                                big changes on the policy front or attempted changes, that is. A
+                                                Republican-majority Senate would do whatever it can to block any
+                                                sweeping reforms, leading to more incremental changes via executive
+                                                order. We don’t spend much time trying to predict these sorts of things
+                                                or laying out multiple branching scenarios that might unfold. But the
+                                                one big-picture item that we would be closely monitoring, in the event
+                                                that Trump or a more moderate Democrat is not at the helm, is some sort
+                                                of massive fiscal spending bill. The U.S. is already running a $1
+                                                trillion annual budget deficit, so any large-scale fiscal package like
+                                                the Green New Deal or Medicare-for-All would add substantially to the
+                                                deficit and potentially cause ripple effects in the bond and currency
+                                                markets.
+                                            </p>
+
+
+
+                                            <p class="disclosures-text">All investments are subject to risk. Asset
+                                                allocation and diversification do not ensure a profit or protect against
+                                                a loss. There is no assurance that any investment strategy will be
+                                                successful or that any securities transaction, holdings, sectors or
+                                                allocations discussed will be profitable.
+
+
+                                            </p>
+                                            <p class="disclosures-text">This material may include forward-looking
+                                                statements. These statements are not historical facts, but instead
+                                                represent only beliefs regarding future events, many of which, by their
+                                                nature, are inherently uncertain. You should not place undue reliance on
+                                                forward-looking statements as it is possible that actual results and
+                                                financial conditions may differ, possibly materially, from the
+                                                anticipated results and financial conditions indicated in these
+                                                forward-looking statements.
+
+
+                                            </p>
+                                            <p class="disclosures-text">The information contained within does not
+                                                represent a recommendation to buy, hold or sell any security and it
+                                                should not be assumed that the securities transactions or holdings
+                                                discussed were or will prove to be profitable. All holdings are subject
+                                                to change daily. The information presented is not tax, investment or
+                                                legal advice. Prospective investors should consult with their advisors.
+
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End Modal-->
+
+                <div class="col-lg-6">
+                    <div class="card quote-card shadow-lg cta-zoom">
+                        <div class="card-body">
+                            <h5 class="card-title text-uppercase partner-purple-text ml-lg-5 mt-lg-4"><strong>Eagle
+                                    Asset
+                                    Management
+                                    Small and
+                                    Mid Cap Growth Team</strong>
+                            </h5>
+                            <p class="card-text cta-gray-text ml-lg-5">“To some extent, we’re seeing a paradox develop
+                                in the current environment: The better the market performs, the less it seems to
+                                politicians that we need a trade deal.” </p>
+                            <p class="ml-lg-5">
+                                <a data-toggle="modal" data-target="#eagleSmallMidTradeWarModal"
+                                    class="text-uppercase readmore-link"><strong>Read More <em
+                                            class="fa fa-chevron-right"></em></strong></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal -->
+                <div class="modal fade" id="eagleSmallMidTradeWarModal" tabindex="-1" role="dialog"
+                    aria-labelledby="eagleSmallMidTradeWarModalTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-xl" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-3">
+                                            <div class="card modal-card ml-lg-n5">
+                                                <div class="card-body">
+                                                    <img class="mb-4 ml-lg-5" src="images/eagle-logo.png"
+                                                        alt="Eagle Asset Management">
+                                                    <p class="cta-gray-text ml-lg-5">To some extent, we’re seeing a
+                                                        paradox develop in the current environment: The better the
+                                                        market performs, the less it seems to politicians that we need a
+                                                        trade deal.” </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <h5 class="modal-title partner-purple-text mb-4">
+                                                <strong>Trade War/Tariffs</strong></h5>
+                                            <p class="text-uppercase cta-steel-text"><strong>Eagle Small and Mid Cap
+                                                    Growth Team</strong></p>
+                                            <h6 class="partner-purple-text mb-4">With continued trade uncertainty, slow
+                                                global economic growth, and the U.S. heading into a presidential
+                                                election year, do you see headline volatility remaining elevated in
+                                                2020? Are there any specific sectors/industries or investment themes
+                                                that you believe could benefit in this environment? How, if at all, do
+                                                you position around this?</h6>
+
+                                            <p class="cta-gray-text">To some extent, we’re seeing a paradox develop in
+                                                the current environment: The better the market performs, the less it
+                                                seems to politicians that we need a trade deal. Industrials and any
+                                                company that sells capital equipment could benefit from trade
+                                                resolutions. Excess in capacity that tends to occur at the end of the
+                                                cycle has been delayed, because capital spending has been pushed off due
+                                                to trade uncertainty. So any trade resolutions should re-accelerate
+                                                capex. However, even without trade resolution, spending has been so
+                                                anemic that we will likely see a pickup as businesses need to make
+                                                minimum investments.
+
+                                            </p>
+
+
+                                            <p class="disclosures-text">All investments are subject to risk. Asset
+                                                allocation and diversification do not ensure a profit or protect against
+                                                a loss. There is no assurance that any investment strategy will be
+                                                successful or that any securities transaction, holdings, sectors or
+                                                allocations discussed will be profitable.
+
+
+
+                                            </p>
+                                            <p class="disclosures-text">This material may include forward-looking
+                                                statements. These statements are not historical facts, but instead
+                                                represent only beliefs regarding future events, many of which, by their
+                                                nature, are inherently uncertain. You should not place undue reliance on
+                                                forward-looking statements as it is possible that actual results and
+                                                financial conditions may differ, possibly materially, from the
+                                                anticipated results and financial conditions indicated in these
+                                                forward-looking statements.
+
+
+
+                                            </p>
+                                            <p class="disclosures-text">The information contained within does not
+                                                represent a recommendation to buy, hold or sell any security and it
+                                                should not be assumed that the securities transactions or holdings
+                                                discussed were or will prove to be profitable. All holdings are subject
+                                                to change daily. The information presented is not tax, investment or
+                                                legal advice. Prospective investors should consult with their advisors.
+
+
+                                            </p>
+                                            <p class="disclosures-text">Capital expenditures, commonly known as capex,
+                                                are funds used by a company to acquire, upgrade, and maintain physical
+                                                assets such as property, buildings, an industrial plant, technology, or
+                                                equipment.
+
+
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End Modal-->
+                <div class="col">
+                    <div class="card shadow-lg background-grey cta-zoom">
+                        <div class="card-body">
+                            <h5 class="card-title text-uppercase"><strong>Scout Investments International Equity
+                                    Team</strong></h5>
+                            <p class="card-text">“By now, we think most people in the U.S. don’t believe that trade wars
+                                are good and easy to win.” </p>
+                            <p>
+                                <a data-toggle="modal" data-target="#ScoutEquityTradeWarModal"
+                                    class="text-uppercase readmore-link"><strong>Read More <em
+                                            class="fa fa-chevron-right"></em></strong></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="ScoutEquityTradeWarModal" tabindex="-1" role="dialog"
+                    aria-labelledby="ScoutEquityTradeWarModalTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-xl" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-3">
+                                            <div class="card modal-card ml-lg-n5">
+                                                <div class="card-body">
+                                                    <img class="mb-4 ml-lg-5" src="images/scout-logo.png"
+                                                        alt="Scout Investments">
+                                                    <p class="cta-gray-text ml-lg-5">By now, we think most people in
+                                                        the U.S. don’t believe that trade wars are good and easy to win.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <h5 class="modal-title partner-purple-text mb-4">
+                                                <strong>Trade War/Tariffs</strong></h5>
+                                            <p class="text-uppercase cta-steel-text"><strong>Scout International Equity
+                                                    Team</strong></p>
+                                            <h6 class="partner-purple-text mb-4">If we make meaningful progress on
+                                                resolving trade disputes, are there specific regions or
+                                                sectors/industries that you believe could benefit the most? How, if at
+                                                all, do you position around that?</h6>
+
+                                            <p class="cta-gray-text">By now, we think most people in the U.S. don’t
+                                                believe that trade wars are good and easy to win. If tariffs were
+                                                described as taxes on the general public, they would have even less
+                                                support. But this is what they are, especially on goods and intermediate
+                                                products that cannot be substituted and have to be imported at higher
+                                                prices. The manufacture of these goods migrated outside the U.S. years
+                                                ago because they were more efficiently produced elsewhere. And while
+                                                there may be some good news from the domestic steel industry, for
+                                                example, which gets higher prices for its end products, U.S. consumers
+                                                are ultimately paying those higher prices. Meanwhile, many smaller U.S.
+                                                manufacturing companies are being crushed by huge cost increases on
+                                                specialized products they can only get from places like China.
+
+
+                                            </p>
+                                            <p class="cta-gray-text">But this argument hasn’t stopped the U.S. from
+                                                forging ahead with tariffs against China and other countries. China has
+                                                long been guilty of unfair practices, including theft of intellectual
+                                                property, but tariffs are a blunt instrument, and China is willing to
+                                                play the long game, partly because it has no voters to appease and
+                                                partly because Donald Trump will likely want to settle and declare some
+                                                kind of a victory coming into his re-election campaign.
+                                            </p>
+                                            <p class="cta-gray-text">Some of the countries most impacted by the
+                                                U.S.-China trade war are export-led countries that sell components in
+                                                China that are included in onward trade to the U.S. According to a
+                                                recent Reuters poll, half of Japanese companies have seen their profits
+                                                hurt by this trade war. China also plays a huge role in the global
+                                                automotive supply chain; many components that appear in U.S.- made cars
+                                                come from China. Technology is another industry at the forefront of the
+                                                U.S. tariff policy as many U.S. semiconductor chip makers and
+                                                electronics manufacturers depend on China for sales, and the U.S. has
+                                                also highlighted national security concerns with some Chinese companies.
+                                                The agricultural industry in the U.S. has also been hugely impacted.
+                                                China is the largest importer of U.S. soybeans and imposed retaliatory
+                                                tariffs on these imports to the detriment of U.S. farmers. The sooner a
+                                                comprehensive agreement can be reached, the sooner these industries can
+                                                return to some kind of stability.</p>
+
+
+                                            <p class="disclosures-text">All investments are subject to risk. Asset
+                                                allocation and diversification do not ensure a profit or protect against
+                                                a loss. There is no assurance that any investment strategy will be
+                                                successful or that any securities transaction, holdings, sectors or
+                                                allocations discussed will be profitable.
+
+
+
+
+                                            </p>
+                                            <p class="disclosures-text">This material may include forward-looking
+                                                statements. These statements are not historical facts, but instead
+                                                represent only beliefs regarding future events, many of which, by their
+                                                nature, are inherently uncertain. You should not place undue reliance on
+                                                forward-looking statements as it is possible that actual results and
+                                                financial conditions may differ, possibly materially, from the
+                                                anticipated results and financial conditions indicated in these
+                                                forward-looking statements.
+
+
+
+                                            </p>
+                                            <p class="disclosures-text">The information contained within does not
+                                                represent a recommendation to buy, hold or sell any security and it
+                                                should not be assumed that the securities transactions or holdings
+                                                discussed were or will prove to be profitable. All holdings are subject
+                                                to change daily. The information presented is not tax, investment or
+                                                legal advice. Prospective investors should consult with their advisors.
+
+
+
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End Modal-->
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="card quote-card shadow-lg cta-zoom">
+                        <div class="card-body">
+                            <h5 class="card-title text-uppercase partner-purple-text ml-lg-5 mt-lg-4"><strong>Eagle
+                                    Asset
+                                    Management
+                                    Vermont
+                                    Team</strong></h5>
+                            <p class="card-text cta-gray-text ml-lg-5">“To the extent that we get resolution on trade
+                                issues,
+                                that should also
+                                help small caps and be particularly advantageous to those more value and cyclically
+                                oriented companies.” </p>
+                            <p class="ml-lg-5">
+                                <a data-toggle="modal" data-target="#EagleVermontTradeWarModal"
+                                    class="text-uppercase readmore-link"><strong>Read More
+                                        <em class="fa fa-chevron-right"></em></strong></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="EagleVermontTradeWarModal" tabindex="-1" role="dialog"
+                    aria-labelledby="EagleVermontTradeWarModalTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-xl" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-3">
+                                            <div class="card modal-card ml-lg-n5">
+                                                <div class="card-body">
+                                                    <img class="mb-4 ml-lg-5" src="images/eagle-logo.png"
+                                                        alt="Eagle Asset Management">
+                                                    <p class="cta-gray-text ml-lg-5">To the extent that we get
+                                                        resolution on trade
+                                                        issues, that should also help small caps and be particularly
+                                                        advantageous to
+                                                        those more value and cyclically oriented companies. </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <h5 class="modal-title partner-purple-text mb-4">
+                                                <strong>Trade War/Tariffs</strong></h5>
+                                            <p class="text-uppercase cta-steel-text"><strong>Eagle Vermont Investment
+                                                    Team</strong></p>
+                                            <h6 class="partner-purple-text mb-4">Why do you think small caps have
+                                                underperformed larger caps on a relative basis since the drawdown in the
+                                                fourth quarter of 2018, and what could be the catalyst to lead to
+                                                outperformance?</h6>
+
+                                            <p class="cta-gray-text"><strong>Jason Wulff:</strong> Very simply, it’s
+                                                fundamentals. 2019 earnings for the S&P SmallCap 600
+                                                Index are down 8.5%, while the S&P 500 is only down a little over 2%. A
+                                                lot of it has been driven by the more cyclical sectors: energy,
+                                                industrials, materials. Those areas see significantly steeper declines
+                                                in terms of earnings estimates amongst smaller caps and large caps. This
+                                                is not atypical; the business models tend to be more sensitive to
+                                                changes in economic trends. We have seen, particularly with trade
+                                                tensions and changing supply chains, that small-cap companies have been
+                                                at a disadvantage in terms of sourcing from different places and having
+                                                that negotiating leverage. Secondarily, we talk about investor
+                                                positioning, generally toward what are perceived as higher quality,
+                                                lower beta, more defensive issues, and traditionally that has been
+                                                larger cap. In this market cycle, we’ve seen factor investing and
+                                                stylistic investing accelerating and becoming a more meaningful driver
+                                                of short-term results. That has had a bias toward the large cap.
+
+
+
+                                            </p>
+                                            <p class="cta-gray-text"><strong>Matthew McGeary:</strong> Certainly I think
+                                                better expected earnings growth in 2020 should help close the gap a bit
+                                                between large and small caps. Since September, we saw a bit of a market
+                                                rotation into more value-oriented names with the expectation that we’ll
+                                                see better earnings growth in 2020. That more risk-on behavior, at least
+                                                in the equity market, should benefit small caps. To the extent that we
+                                                get resolution on trade issues, that should also help small caps and be
+                                                particularly advantageous to those more value and cyclically oriented
+                                                companies.
+                                            </p>
+
+
+                                            <p class="disclosures-text">All investments are subject to risk. Asset
+                                                allocation and diversification do not ensure a profit or protect against
+                                                a loss. There is no assurance that any investment strategy will be
+                                                successful or that any securities transaction, holdings, sectors or
+                                                allocations discussed will be profitable.
+
+
+
+
+
+                                            </p>
+                                            <p class="disclosures-text">This material may include forward-looking
+                                                statements. These statements are not historical facts, but instead
+                                                represent only beliefs regarding future events, many of which, by their
+                                                nature, are inherently uncertain. You should not place undue reliance on
+                                                forward-looking statements as it is possible that actual results and
+                                                financial conditions may differ, possibly materially, from the
+                                                anticipated results and financial conditions indicated in these
+                                                forward-looking statements.
+
+
+
+
+                                            </p>
+                                            <p class="disclosures-text">The information contained within does not
+                                                represent a recommendation to buy, hold or sell any security and it
+                                                should not be assumed that the securities transactions or holdings
+                                                discussed were or will prove to be profitable. All holdings are subject
+                                                to change daily. The information presented is not tax, investment or
+                                                legal advice. Prospective investors should consult with their advisors.
+
+
+
+
+                                            </p>
+                                            <p class="disclosures-text">The S&P 500 Index measures change in stock
+                                                market conditions based on the average performance of 500 widely held
+                                                common stocks. It is a market-weighted index calculated on a total
+                                                return basis with dividend reinvested. The S&P 500 represents
+                                                approximately 75% of the investable U.S. equity market.
+                                            </p>
+                                            <p class="disclosures-text">The S&P SmallCap 600 Index is a stock market
+                                                index established by Standard & Poor's. It covers roughly the small-cap
+                                                range of U.S. stocks, using a capitalization-weighted index.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End Modal-->
+                <div class="col-lg-4">
+                    <div class="card shadow-lg background-grey cta-zoom">
+                        <div class="card-body">
+                            <h5 class="card-title text-uppercase"><strong>Eagle Asset Management Equity Income
+                                    Team</strong></h5>
+                            <p class="card-text">“It is our view that the majority of the slowdown has not been from the
+                                direct effect of the tariffs … but the indirect effects in the form of lower executive
+                                confidence.” </p>
+                            <p>
+                                <a data-toggle="modal" data-target="#EagleEquityTradeWarModal"
+                                    class="text-uppercase readmore-link"><strong>Read More <em
+                                            class="fa fa-chevron-right"></em></strong></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="EagleEquityTradeWarModal" tabindex="-1" role="dialog"
+            aria-labelledby="EagleEquityTradeWarModalTitle" aria-hidden="true">
+            <div class="modal-dialog modal-xl" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-3">
+                                    <div class="card modal-card ml-lg-n5">
+                                        <div class="card-body">
+                                            <img class="mb-4 ml-lg-5" src="images/eagle-logo.png"
+                                                alt="Eagle Asset Management">
+                                            <p class="cta-gray-text ml-lg-5">It is our view that the majority of the
+                                                slowdown has not been from the direct effect of the tariffs … but the
+                                                indirect effects in the form of lower executive confidence. </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <h5 class="modal-title partner-purple-text mb-4">
+                                        <strong>Trade War/Tariffs</strong></h5>
+                                    <p class="text-uppercase cta-steel-text"><strong>Eagle Equity Income Team</strong>
+                                    </p>
+                                    <h6 class="partner-purple-text mb-4">What are the major factors or trends you think
+                                        investors should watch closely in 2020 and why?</h6>
+
+                                    <p class="cta-gray-text">We believe that the tariff war with China has been a key
+                                        factor in the economic slowdown we are experiencing. However, it is our view
+                                        that the majority of the slowdown has not been from the direct effect of the
+                                        tariffs — the fact that we have to pay more for goods — but the indirect effects
+                                        in the form of lower executive confidence. Lower business confidence has led to
+                                        lower capital expenditures that in turn have led to a slower expansion in the
+                                        economy. We believe it is likely that an easing of tariff tensions would inject
+                                        new confidence for continued economic growth not only in the United States but
+                                        worldwide.</p>
+
+                                    <p class="disclosures-text">All investments are subject to risk. Asset allocation
+                                        and diversification do not ensure a profit or protect against a loss. There is
+                                        no assurance that any investment strategy will be successful or that any
+                                        securities transaction, holdings, sectors or allocations discussed will be
+                                        profitable.</p>
+
+                                    <p class="disclosures-text">This material may include forward-looking statements.
+                                        These statements are not historical facts, but instead represent only beliefs
+                                        regarding future events, many of which, by their nature, are inherently
+                                        uncertain. You should not place undue reliance on forward-looking statements as
+                                        it is possible that actual results and financial conditions may differ, possibly
+                                        materially, from the anticipated results and financial conditions indicated in
+                                        these forward-looking statements.</p>
+
+                                    <p class="disclosures-text">The information contained within does not represent a
+                                        recommendation to buy, hold or sell any security and it should not be assumed
+                                        that the securities transactions or holdings discussed were or will prove to be
+                                        profitable. All holdings are subject to change daily. The information presented
+                                        is not tax, investment or legal advice. Prospective investors should consult
+                                        with their advisors.</p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--End Modal-->
+    </section>
+    <section class="section-elections" id="election">
+        <div class="container">
+            <div class="row">
+                <h2 class="mb-5 ml-3"><strong>2020 Elections</strong></h2>
+            </div>
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="card partner-purple-bg shadow-lg cta-zoom">
+                        <div class="card-body">
+                            <h5 class="card-title text-uppercase"><strong>Cougar Global Investments</strong></h5>
+                            <p class="card-text">“We expect President Trump to be re-elected in 2020, given the low
+                                unemployment rate and strong state of the economy.” </p>
+                            <p>
+                                <a data-toggle="modal" data-target="#CougarElectionsModal"
+                                    class="text-uppercase readmore-link"><strong>Read More <em
+                                            class="fa fa-chevron-right"></em></strong></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="CougarElectionsModal" tabindex="-1" role="dialog"
+                    aria-labelledby="CougarElectionsModalTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-xl" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-3">
+                                            <div class="card modal-card ml-lg-n5">
+                                                <div class="card-body">
+                                                    <img class="mb-4 ml-lg-5" src="images/cougar-logo.png"
+                                                        alt="Cougar Global Investments">
+                                                    <p class="cta-gray-text ml-lg-5">We expect President Trump to be
+                                                        re-elected in 2020, given the low unemployment rate and strong
+                                                        state of the economy.” </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <h5 class="modal-title partner-purple-text mb-4">
+                                                <strong>2020 Elections</strong></h5>
+                                            <p class="text-uppercase cta-steel-text"><strong>Cougar Global
+                                                    Investments</strong></p>
+                                            <h6 class="partner-purple-text mb-4">How do you expect the current U.S.
+                                                political climate — impeachment, the Presidential and Congressional
+                                                elections, healthcare policy debates — to affect the economy and
+                                                financial markets?</h6>
+
+                                            <p class="cta-gray-text">The outcome of the 2020 Presidential and
+                                                Congressional elections will have a very substantial impact on U.S.
+                                                domestic and foreign policy for years to come. The impact on economic
+                                                policy — and financial markets — will also be significant. Candidates
+                                                for the Democratic nomination for president hold very different —
+                                                sometimes diametrically opposite — views on key hot-button issues when
+                                                compared to President Donald Trump. Democratic candidates are generally
+                                                in favor of more regulation, higher taxes, and greater government
+                                                involvement (particularly in healthcare), while Republicans are
+                                                generally in favor of less regulation and fewer government programs
+                                                (notwithstanding the fact that the annual government deficit now stands
+                                                at over $1 trillion under President Trump). At Cougar Global, we expect
+                                                President Trump to be re-elected in 2020, given the low unemployment
+                                                rate and strong state of the economy. In this case, we are likely to see
+                                                a continued regime of low taxes and regulations — a positive for stocks.
+                                                However, there is a significant chance that — given the enormous wealth
+                                                inequality in the U.S. (according to Forbes,1 the top three wealthiest
+                                                individuals are worth more than the bottom 50% of the population) —
+                                                voters could elect a left-leaning Democrat as president. This outcome
+                                                would be less favorable for global growth and stocks, particularly for
+                                                highly profitable healthcare companies. Several Democratic candidates
+                                                have outlined “Medicare-for-All” initiatives that would curtail the
+                                                profitability of private insurers and drug companies. </p>
+
+                                            <p class="cta-gray-text">While a lot of airtime has been devoted to
+                                                President Trump’s impeachment, there are no signs yet of an impact on
+                                                his overall job approval ratings (as measured by Real Clear Politics) or
+                                                support within the Republican Party (which stands at over 90%, according
+                                                to a recent Gallup poll). Given that Democrats are unlikely to convince
+                                                enough (if any) Republicans in the Senate to remove President Trump from
+                                                office, the impeachment at this point is largely political theater. In
+                                                our view, voters, not Congress, will decide in 2020 whether President
+                                                Trump or a Democrat will occupy the White House for the next four years.
+                                                On the latter, former Vice President Joe Biden, Senator Elizabeth
+                                                Warren, Senator Bernie Sanders, Mayor Pete Buttigieg, and former New
+                                                York Mayor Mike Bloomberg all seem to be contenders. </p>
+
+                                            <p class="disclosures-text"><sup>1</sup> Forbes, “The 3 Richest Americans
+                                                Hold More Wealth Than Bottom 50% of the Country, Study Finds,” November
+                                                9, 2017.</p>
+
+                                            <p class="disclosures-text">All investments are subject to risk. Asset
+                                                allocation and diversification do not ensure a profit or protect against
+                                                a loss. There is no assurance that any investment strategy will be
+                                                successful or that any securities transaction, holdings, sectors or
+                                                allocations discussed will be profitable.</p>
+
+                                            <p class="disclosures-text">This material may include forward-looking
+                                                statements. These statements are not historical facts, but instead
+                                                represent only beliefs regarding future events, many of which, by their
+                                                nature, are inherently uncertain. You should not place undue reliance on
+                                                forward-looking statements as it is possible that actual results and
+                                                financial conditions may differ, possibly materially, from the
+                                                anticipated results and financial conditions indicated in these
+                                                forward-looking statements.</p>
+                                            <p class="disclosures-text">The information contained within does not
+                                                represent a recommendation to buy, hold or sell any security and it
+                                                should not be assumed that the securities transactions or holdings
+                                                discussed were or will prove to be profitable. All holdings are subject
+                                                to change daily. The information presented is not tax, investment or
+                                                legal advice. Prospective investors should consult with their advisors.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End Modal-->
+                <div class="col-lg-5">
+                    <div class="card quote-card shadow-lg cta-zoom">
+                        <div class="card-body">
+                            <h5 class="card-title text-uppercase partner-purple-text ml-lg-5 mt-lg-4"><strong>ClariVest
+                                    Asset
+                                    Management</strong></h5>
+                            <p class="card-text cta-gray-text ml-lg-5">“Political rhetoric pervades the market as a
+                                whole, and
+                                many, if not
+                                all, sectors will experience periods of heightened volatility during the upcoming
+                                election year.” </p>
+                            <p class="ml-lg-5">
+                                <a data-toggle="modal" data-target="#ClariVestElectionsModal"
+                                    class="text-uppercase readmore-link"><strong>Read More <em
+                                            class="fa fa-chevron-right"></em></strong></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="ClariVestElectionsModal" tabindex="-1" role="dialog"
+            aria-labelledby="ClariVestElectionsModalTitle" aria-hidden="true">
+            <div class="modal-dialog modal-xl" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-3">
+                                    <div class="card modal-card ml-lg-n5">
+                                        <div class="card-body">
+                                            <img class="mb-4 ml-lg-5" src="images/clarivest-logo.png"
+                                                alt="Clarivest Asset Management">
+                                            <p class="cta-gray-text ml-lg-5">Political rhetoric pervades the market as
+                                                a whole, and many, if not all, sectors will experience periods of
+                                                heightened volatility during the upcoming election year. </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <h5 class="modal-title partner-purple-text mb-4">
+                                        <strong>2020 Elections</strong></h5>
+                                    <p class="text-uppercase cta-steel-text"><strong>ClariVest Asset Management</strong>
+                                    </p>
+                                    <h6 class="partner-purple-text mb-4">As the U.S. heads into a presidential election
+                                        cycle, headline volatility will likely persist. How do you think about
+                                        positioning across sectors that could be most impacted by political rhetoric
+                                        (i.e. healthcare, information technology)? Could sharp swings in investor
+                                        sentiment around this noise present potential opportunities? </h6>
+
+                                    <p class="cta-gray-text">Political disorder over the past few years, and the past
+                                        year especially, portends persistent political uncertainty. Political rhetoric
+                                        pervades the market as a whole, and many, if not all, sectors will experience
+                                        periods of heightened volatility during the upcoming election year although
+                                        healthcare, energy, and technology remain top of mind as those most affected in
+                                        the near term as presidential candidates promote policy recommendations.
+                                        Additionally, based on valuation metrics, the broader U.S. market looks rather
+                                        expensive, and those among the most volatile during a regime shift, including
+                                        financials, energy, and industrials, are currently significantly undervalued vs.
+                                        the broader market. With that, we note these short-term volatility spikes
+                                        coincide with periods of heightened political uncertainty, so while day-to-day
+                                        and/or week-to-week fluctuations may seem significant, the stock market tends to
+                                        trend upward over the long run, regardless of who is elected and their
+                                        represented party. Accordingly, in highly volatile areas of the market, we tend
+                                        to play defense and stay closer to the “middle of the boat.” </p>
+
+
+                                    <p class="disclosures-text">All investments are subject to risk. Asset allocation
+                                        and diversification do not ensure a profit or protect against a loss. There is
+                                        no assurance that any investment strategy will be successful or that any
+                                        securities transaction, holdings, sectors or allocations discussed will be
+                                        profitable.
+                                    </p>
+
+                                    <p class="disclosures-text">This material may include forward-looking statements.
+                                        These statements are not historical facts, but instead represent only beliefs
+                                        regarding future events, many of which, by their nature, are inherently
+                                        uncertain. You should not place undue reliance on forward-looking statements as
+                                        it is possible that actual results and financial conditions may differ, possibly
+                                        materially, from the anticipated results and financial conditions indicated in
+                                        these forward-looking statements.
+                                    </p>
+                                    <p class="disclosures-text">The information contained within does not represent a
+                                        recommendation to buy, hold or sell any security and it should not be assumed
+                                        that the securities transactions or holdings discussed were or will prove to be
+                                        profitable. All holdings are subject to change daily. The information presented
+                                        is not tax, investment or legal advice. Prospective investors should consult
+                                        with their advisors.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--End Modal-->
+    </section>
+    <section class="section-downloads">
+        <div class="container">
+            <h3 class="text-center">
+                <a href="https://www.carillontower.com/-/media/rj/affiliate-sites/carillon-tower/pdfs/partner-perspectives-2020-outlook-cta.pdf?la=en"
+                    target="_blank" class="text-uppercase readmore-link download-outlook"><strong>download our complete
+                        2020
+                        outlook <em class="fa fa-chevron-right"></em></strong></a>
+            </h3>
+            <p class="text-center">Read insights from all 11 portfolio teams.</p>
+        </div>
+    </section>
+    <section class="section-federal-reserve" id="federal-reserve">
+        <div class="container">
+            <div class="row">
+                <h2 class="mb-5 ml-3"><strong>Federal Reserve</strong></h2>
+            </div>
+            <div class="row">
+                <div class="col-lg-5">
+                    <div class="card quote-card shadow-lg cta-zoom">
+                        <div class="card-body">
+                            <h5 class="card-title text-uppercase partner-purple-text ml-lg-5 mt-lg-4"><strong>Reams
+                                    Asset
+                                    Management</strong></h5>
+                            <p class="card-text cta-gray-text ml-lg-5">“We cannot rule out the possibility of the Fed
+                                slashing
+                                rates and dragging U.S. yields towards the same black hole in which Japan and Europe are
+                                currently trapped.” </p>
+                            <p class="ml-lg-5">
+                                <a data-toggle="modal" data-target="#ReamsFederalReserveModal"
+                                    class="text-uppercase readmore-link"><strong>Read More <em
+                                            class="fa fa-chevron-right"></em></strong></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="ReamsFederalReserveModal" tabindex="-1" role="dialog"
+                    aria-labelledby="ReamsFederalReserveModalTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-xl" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-3">
+                                            <div class="card modal-card ml-lg-n5">
+                                                <div class="card-body">
+                                                    <img class="mb-4 ml-lg-5" src="images/reams-2.png"
+                                                        alt="Reams Asset Management">
+                                                    <p class="cta-gray-text ml-lg-5">We cannot rule out the possibility
+                                                        of the Fed slashing rates and dragging U.S. yields towards the
+                                                        same black hole in which Japan and Europe are currently trapped.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <h5 class="modal-title partner-purple-text mb-4">
+                                                <strong>Federal Reserve</strong></h5>
+                                            <p class="text-uppercase cta-steel-text"><strong>Reams Asset
+                                                    Management</strong></p>
+                                            <h6 class="partner-purple-text mb-4">What is your assessment of global
+                                                monetary policy? </h6>
+
+                                            <p class="cta-gray-text">Monetary policy has been largely ineffective, as
+                                                central banks have shown limited ability to spur growth and inflation
+                                                via monetary stimulus over the past 10+ years. Emergency policy measures
+                                                were implemented in the midst of the Global Financial Crisis to prevent
+                                                a complete collapse of the financial system. In that narrow framework,
+                                                they have indeed been successful. These extremely accommodative policies
+                                                have persisted for more than a decade, however, much longer than anyone
+                                                would have predicted, and their ongoing efficacy is questionable at
+                                                best.
+                                            </p>
+                                            <p class="cta-gray-text">The most obvious outcome of all of this liquidity
+                                                sloshing around the globe has been the boosting of risk assets and the
+                                                suppression of volatility. Global growth has been decent over this
+                                                timeframe, but somewhat disappointing given the massive size of the
+                                                stimulus, and generating inflation has proven all but impossible.
+                                            </p>
+                                            <p class="cta-gray-text">Some will make the counterfactual argument that
+                                                growth would have been much worse without the stimulus, and that we may
+                                                have experienced outright deflation. This is unprovable, of course, but
+                                                point granted. Perhaps we would now be in year 12 of another Great
+                                                Depression without #QE4ever.
+                                                The root problem, however, is not that the cost of money is too dear,
+                                                choking off growth; money is in fact way too cheap and no one knows what
+                                                to do with all of it.
+                                            </p>
+                                            <p class="cta-gray-text">Looking ahead, central banks have fewer monetary
+                                                policy levers to pull than they did in 2008. Negative yields and
+                                                quantitative easing (QE) programs are pervasive, but most developed
+                                                economies still face disinflation and sluggish growth. When the next
+                                                cyclical downturn occurs, central banks could take risk-free rates into
+                                                even deeper negative territory or add trillions more to their
+                                                already-bloated balance sheets. But even if unconventional policy tools
+                                                have become the norm, they are path-dependent and the starting point
+                                                matters.</p>
+
+                                            <p class="cta-gray-text">Additional rate cuts may provide a short-term boost
+                                                to equity markets, and more QE will compress bond yields even further,
+                                                but this is unlikely to boost aggregate demand and capital expenditures.
+                                                We have reached the monetary policy “event horizon,” the point where
+                                                historical cause-and-effect relationships start to break down. The only
+                                                likely policy impetus for a surge in growth and inflation would appear
+                                                to be significant fiscal stimulus, which also faces long odds given the
+                                                current political situation in both the U.S. and Europe. Although we
+                                                believe it would be (yet more) folly, we cannot rule out the possibility
+                                                of the Fed slashing rates and dragging U.S. yields towards the same
+                                                black hole in which Japan and Europe are currently trapped.</p>
+
+                                            <p class="disclosures-text">All investments are subject to risk. Asset
+                                                allocation and diversification do not ensure a profit or protect against
+                                                a loss. There is no assurance that any investment strategy will be
+                                                successful or that any securities transaction, holdings, sectors or
+                                                allocations discussed will be profitable.
+
+                                            </p>
+
+                                            <p class="disclosures-text">This material may include forward-looking
+                                                statements. These statements are not historical facts, but instead
+                                                represent only beliefs regarding future events, many of which, by their
+                                                nature, are inherently uncertain. You should not place undue reliance on
+                                                forward-looking statements as it is possible that actual results and
+                                                financial conditions may differ, possibly materially, from the
+                                                anticipated results and financial conditions indicated in these
+                                                forward-looking statements.
+                                            </p>
+                                            <p class="disclosures-text">The information contained within does not
+                                                represent a recommendation to buy, hold or sell any security and it
+                                                should not be assumed that the securities transactions or holdings
+                                                discussed were or will prove to be profitable. All holdings are subject
+                                                to change daily. The information presented is not tax, investment or
+                                                legal advice. Prospective investors should consult with their advisors.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End Modal-->
+                <div class="col-lg-3">
+                    <div class="card partner-purple-bg shadow-lg cta-zoom">
+                        <div class="card-body">
+                            <h5 class="card-title text-uppercase"><strong>Eagle Asset Management Fixed Income
+                                    Team</strong></h5>
+                            <p class="card-text cta-steel-text">“The Federal Reserve’s activity in 2019 has been more a
+                                syncing up with
+                                what’s been going on globally than any sort of domestic stimulus.” </p>
+                            <p>
+                                <a data-toggle="modal" data-target="#EagleFederalReserveModal"
+                                    class="text-uppercase readmore-link"><strong>Read More <em
+                                            class="fa fa-chevron-right"></em></strong></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="EagleFederalReserveModal" tabindex="-1" role="dialog"
+                aria-labelledby="EagleFederalReserveModalTitle" aria-hidden="true">
+                <div class="modal-dialog modal-xl" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-3">
+                                        <div class="card modal-card ml-lg-n5">
+                                            <div class="card-body">
+                                                <img class="mb-4 ml-lg-5" src="images/eagle-logo.png"
+                                                    alt="Eagle Asset Management">
+                                                <p class="cta-gray-text ml-lg-5">The Federal Reserve’s activity in
+                                                    2019 has been more a syncing up with what’s been going on
+                                                    globally than any sort of domestic stimulus. </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <h5 class="modal-title partner-purple-text mb-4">
+                                            <strong>Federal Reserve</strong></h5>
+                                        <p class="text-uppercase cta-steel-text"><strong>Eagle Fixed Income
+                                                Team</strong></p>
+                                        <h6 class="partner-purple-text mb-4">After a relatively brief period of rising
+                                            interest rates, the Fed has now shifted to a more accommodative stance,
+                                            cutting the Fed funds rate several times and resuming balance sheet
+                                            expansion. What kind of stimulus could this provide to the economy and
+                                            capital markets? </h6>
+
+                                        <p class="cta-gray-text"><strong>James Camp:</strong> I think the Federal
+                                            Reserve’s activity in 2019 has been more a syncing up with what’s been going
+                                            on globally than any sort of domestic stimulus. Through 2019, we saw an
+                                            acceleration of negative-yielding debt globally, and a slowdown in real
+                                            economic data in the United States. We view the Fed’s pivot in 2019 as
+                                            merely a squaring of accounts — a move that was necessary to reconfigure the
+                                            yield curve and keep the U.S. dollar and other indicators in line. The
+                                            balance sheet expansion done in the face of the overnight market failures is
+                                            — to us — a form of quantitative easing. We believe at this point in the
+                                            market cycle it has diminishing marginal value for the real economy but is
+                                            still stimulative for risk assets.</p>
+                                        <p class="cta-gray-text"><strong>John Lagowski:</strong> It’s a matter of “How
+                                            is this going to stimulate asset price inflation” vs. “What is this going to
+                                            do for the economy?” Even if the data does start to stabilize here soon,
+                                            there’s really not a catalyst for a meaningful rebound. One of the messages
+                                            has been “stabilization is not necessarily reacceleration.”</p>
+                                        <p class="cta-gray-text"><strong>Joe Jackson:</strong> It’s unlikely we will see
+                                            the same reacceleration due to low rates and Fed easing that we saw
+                                            previously during this expansion when companies were able to lever up. The
+                                            migration in corporate bonds over the past 10 years from high investment
+                                            grade to triple-B has been well documented, and it has its limits. Many
+                                            corporations are pretty indebted right now, so I think the Fed’s actions are
+                                            more of an attempt to keep the party going than something that will spur a
+                                            big new wave of growth.</p>
+
+
+                                        <p class="disclosures-text">All investments are subject to risk. Asset
+                                            allocation and diversification do not ensure a profit or protect against a
+                                            loss. There is no assurance that any investment strategy will be successful
+                                            or that any securities transaction, holdings, sectors or allocations
+                                            discussed will be profitable.</p>
+
+                                        <p class="disclosures-text">This material may include forward-looking
+                                            statements. These statements are not historical facts, but instead represent
+                                            only beliefs regarding future events, many of which, by their nature, are
+                                            inherently uncertain. You should not place undue reliance on forward-looking
+                                            statements as it is possible that actual results and financial conditions
+                                            may differ, possibly materially, from the anticipated results and financial
+                                            conditions indicated in these forward-looking statements.</p>
+                                        <p class="disclosures-text">The information contained within does not represent
+                                            a recommendation to buy, hold or sell any security and it should not be
+                                            assumed that the securities transactions or holdings discussed were or will
+                                            prove to be profitable. All holdings are subject to change daily. The
+                                            information presented is not tax, investment or legal advice. Prospective
+                                            investors should consult with their advisors.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--End Modal-->
+    </section>
+    <section class="section-growth" id="growth">
+        <div class="container">
+            <div class="row">
+                <h2 class="mb-5 ml-3"><strong>Growth vs. Value</strong></h2>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+
+                    <div class="card quote-card shadow-lg cta-zoom">
+                        <div class="card-body">
+                            <h5 class="card-title text-uppercase partner-purple-text ml-lg-5 mt-lg-4"><strong>Scout
+                                    Investments Mid Cap
+                                    Equity
+                                    Team</strong></h5>
+                            <p class="card-text cta-gray-text ml-lg-5">“Many of the traditional ‘value’ sectors … are
+                                populated
+                                with
+                                industries that can be negatively impacted by lower interest rates, trade uncertainties,
+                                macroeconomic weaknesses, and political changes.” </p>
+                            <p class="ml-lg-5">
+                                <a data-toggle="modal" data-target="#ScoutMidCapGrowthModal"
+                                    class="text-uppercase readmore-link"><strong>Read More <em
+                                            class="fa fa-chevron-right"></em></strong></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="ScoutMidCapGrowthModal" tabindex="-1" role="dialog"
+                    aria-labelledby="ScoutMidCapGrowthModalTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-xl" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-3">
+                                            <div class="card modal-card ml-lg-n5">
+                                                <div class="card-body">
+                                                    <img class="mb-4 ml-lg-5" src="images/scout-logo.png"
+                                                        alt="Scout Investments">
+                                                    <p class="cta-gray-text ml-lg-5">Many of the traditional ‘value’
+                                                        sectors … are populated with industries that can be negatively
+                                                        impacted by lower interest rates, trade uncertainties,
+                                                        macroeconomic weaknesses, and political changes. </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <h5 class="modal-title partner-purple-text mb-4">
+                                                <strong>Growth vs. Value</strong></h5>
+                                            <p class="text-uppercase cta-steel-text"><strong>Scout Mid Cap Equity
+                                                    Team</strong></p>
+                                            <h6 class="partner-purple-text mb-4">We saw a continuation in the
+                                                significant outperformance of growth vs. value throughout most of 2019,
+                                                with a sharp reversal in September. Discuss your thoughts on the large
+                                                performance gap between growth and value sectors and any forces you
+                                                think could impact this going forward, particularly in the in the
+                                                mid-cap space. </h6>
+
+                                            <p class="cta-gray-text">Many of the traditional “value” sectors of the
+                                                market are populated with industries that can be negatively impacted by
+                                                lower interest rates (banks, insurance, financials); trade uncertainties
+                                                and macroeconomic weakness (metals, chemicals, automotive, energy); and
+                                                political changes (energy, HMOs, pharmaceuticals, financials). We
+                                                believe the distinction between “value” and “growth” stocks can be an
+                                                artificial one, often a matter of subjective opinion. We have sometimes
+                                                perceived that certain “growth” stocks are actually more attractively
+                                                valued in our opinion than so-called “value” stocks. In a global economy
+                                                where economic growth is decelerating and can be scarce due to
+                                                structural issues of aging demographics, high debt levels, and
+                                                relatively high domestic interest rates, companies that can grow
+                                                organically can trade at a premium and perhaps have better performing
+                                                stock prices than companies that lack organic volume growth or pricing
+                                                power. We think meaningful trade deals, should they occur, would help
+                                                lift interest rates and boost many “value” stocks, which is what
+                                                happened starting in September. Longer term, we believe the more
+                                                innovative and faster growing corners of the market often retain an
+                                                advantage for performance due to superior competitive dynamics and
+                                                business models that drive pricing power and volume growth. With weak
+                                                pricing power in many “value” industries and persistently low interest
+                                                rates, some “value” stocks may continue to struggle unless there is a
+                                                persistent change in the global economy.</p>
+
+                                            <p class="disclosures-text">All investments are subject to risk. Asset
+                                                allocation and diversification do not ensure a profit or protect against
+                                                a loss. There is no assurance that any investment strategy will be
+                                                successful or that any securities transaction, holdings, sectors or
+                                                allocations discussed will be profitable.</p>
+
+                                            <p class="disclosures-text">This material may include forward-looking
+                                                statements. These statements are not historical facts, but instead
+                                                represent only beliefs regarding future events, many of which, by their
+                                                nature, are inherently uncertain. You should not place undue reliance on
+                                                forward-looking statements as it is possible that actual results and
+                                                financial conditions may differ, possibly materially, from the
+                                                anticipated results and financial conditions indicated in these
+                                                forward-looking statements.</p>
+                                            <p class="disclosures-text">The information contained within does not
+                                                represent a recommendation to buy, hold or sell any security and it
+                                                should not be assumed that the securities transactions or holdings
+                                                discussed were or will prove to be profitable. All holdings are subject
+                                                to change daily. The information presented is not tax, investment or
+                                                legal advice. Prospective investors should consult with their advisors.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End Modal-->
+                <div class="col">
+                    <div class="card shadow-lg background-grey cta-zoom">
+                        <div class="card-body">
+                            <h5 class="card-title text-uppercase"><strong>Eagle Asset Management core Team</strong></h5>
+                            <p class="card-text">“Some inflation can be beneficial for cyclical value stocks over longer
+                                duration growth stocks.”</p>
+                            <p>
+                                <a data-toggle="modal" data-target="#EagleCoreGrowthModal"
+                                    class="text-uppercase readmore-link"><strong>Read More <em
+                                            class="fa fa-chevron-right"></em></strong></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="EagleCoreGrowthModal" tabindex="-1" role="dialog"
+                    aria-labelledby="EagleCoreGrowthModalTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-xl" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-3">
+                                            <div class="card modal-card ml-lg-n5">
+                                                <div class="card-body">
+                                                    <img class="mb-4 ml-lg-5" src="images/eagle-logo.png"
+                                                        alt="Eagle Asset Management">
+                                                    <p class="cta-gray-text ml-lg-5">Some inflation can be beneficial
+                                                        for cyclical value stocks over longer duration growth stocks.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <h5 class="modal-title partner-purple-text mb-4">
+                                                <strong>Growth vs. Value</strong></h5>
+                                            <p class="text-uppercase cta-steel-text"><strong>Eagle Core Team</strong>
+                                            </p>
+                                            <h6 class="partner-purple-text mb-4">We saw a continuation in the
+                                                significant outperformance of growth vs. value throughout most of 2019,
+                                                with a sharp reversal in September. Discuss your thoughts on the large
+                                                performance gap between growth and value sectors and any forces you
+                                                think could impact this going forward, particularly in the in the small
+                                                and small/mid cap space.</h6>
+
+                                            <p class="cta-gray-text">The yield curve “un-inverted” after the end of the
+                                                third quarter. All other things equal, this is a positive for value
+                                                stocks, although most factors continue to favor growth. If the Federal
+                                                Reserve continues to cut rates, the risk of inflation is judged to be
+                                                higher. Some inflation can be beneficial for cyclical value stocks over
+                                                longer duration growth stocks.</p>
+
+                                            <p class="cta-gray-text">In our view, three main drivers have rewarded
+                                                growth stocks:</p>
+
+                                            <p class="cta-gray-text">1. The relative scarcity of growth: Growth has been
+                                                hard to come by, so sustainable growth stocks
+                                                become the scarce asset and relatively more valuable. Pre-2008 real GDP
+                                                growth after the
+                                                1999-2000 recession was 2.7%. Real GDP growth since 2010 (post the Great
+                                                Recession) has been
+                                                1.7%. Numerous reasons have been given for slow growth this past decade
+                                                such as declining
+                                                productivity, debt hangovers, and the effects of China’s massive capital
+                                                over-investment for a decade
+                                                and a half.</p>
+                                            <p class="cta-gray-text">2. Change in the margin growth pecking order: The
+                                                large-cap investment universe has changed
+                                                drastically since 2000. The high-margin firms are also the high-growth
+                                                firms, largely due to the rise of
+                                                technology monopolies. To make the top quintile of large firms in terms
+                                                of free cash flow margins in
+                                                1998, a firm needed to be at the 10% level. In 2019, a top quintile
+                                                ranking requires a 20% free cash flow
+                                                margin. This is a key point and ties into the slow growth issue: In a
+                                                world of slow growth and low rates,
+                                                free cash flow margins of 20% compounding at even mid-single digits is a
+                                                mechanism for enormous
+                                                wealth creation. Barring anti-trust moves, our forecast shows little to
+                                                stop this phenomenon.
+                                                Economic recoveries and a trade deal may support short-term value
+                                                recoveries but a long-term value
+                                                run may require a collapse in the cycle and its ensuing recovery.</p>
+
+                                            <p class="cta-gray-text">3. Low real rates favor long-duration assets: Real
+                                                interest rates (nominal rates minus inflation
+                                                expectations) are at all-time lows relative to history. Long-duration
+                                                assets such as growth stocks are
+                                                very valuable with these low discount rates. The bigger question might
+                                                be: What type of world gives us
+                                                these century-low rates? It suggests massive past capital
+                                                over-investment and idle capacity relative
+                                                to demand, a thought which is in the back of all of our minds.</p>
+
+                                            <p class="cta-gray-text">While the landscape looks better for value and
+                                                small-cap stocks with the un-inversion of the yield curve, we believe
+                                                growth stocks will continue to show strength.</p>
+
+                                            <p class="disclosures-text">All investments are subject to risk. Asset
+                                                allocation and diversification do not ensure a profit or protect against
+                                                a loss. There is no assurance that any investment strategy will be
+                                                successful or that any securities transaction, holdings, sectors or
+                                                allocations discussed will be profitable.
+                                            </p>
+
+                                            <p class="disclosures-text">This material may include forward-looking
+                                                statements. These statements are not historical facts, but instead
+                                                represent only beliefs regarding future events, many of which, by their
+                                                nature, are inherently uncertain. You should not place undue reliance on
+                                                forward-looking statements as it is possible that actual results and
+                                                financial conditions may differ, possibly materially, from the
+                                                anticipated results and financial conditions indicated in these
+                                                forward-looking statements.</p>
+
+                                            <p class="disclosures-text">The information contained within does not
+                                                represent a recommendation to buy, hold or sell any security and it
+                                                should not be assumed that the securities transactions or holdings
+                                                discussed were or will prove to be profitable. All holdings are subject
+                                                to change daily. The information presented is not tax, investment or
+                                                legal advice. Prospective investors should consult with their advisors.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End Modal-->
+                <div class="col">
+                    <div class="card shadow-lg partner-purple-bg cta-zoom">
+                        <div class="card-body">
+                            <h5 class="card-title text-uppercase"><strong>Scout Investments Small Cap Equity
+                                    Team</strong></h5>
+                            <p class="card-text cta-steel-text">“Over longer time periods, value has outperformed
+                                growth, but in the
+                                current economic environment growth has the edge.” </p>
+                            <p>
+                                <a data-toggle="modal" data-target="#ScoutSmallCapGrowthModal"
+                                    class="text-uppercase readmore-link"><strong>Read More <em
+                                            class="fa fa-chevron-right"></em></strong></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="ScoutSmallCapGrowthModal" tabindex="-1" role="dialog"
+            aria-labelledby="ScoutSmallCapGrowthModalTitle" aria-hidden="true">
+            <div class="modal-dialog modal-xl" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-3">
+                                    <div class="card modal-card ml-lg-n5">
+                                        <div class="card-body">
+                                            <img class="mb-4 ml-lg-5" src="images/scout-logo.png"
+                                                alt="Scout Investments">
+                                            <p class="cta-gray-text ml-lg-5">Over longer time periods, value has
+                                                outperformed growth, but in the current economic environment growth has
+                                                the edge. </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <h5 class="modal-title partner-purple-text mb-4">
+                                        <strong>Growth vs. Value</strong></h5>
+                                    <p class="text-uppercase cta-steel-text"><strong>Scout Small Cap Equity
+                                            Team</strong></p>
+                                    <h6 class="partner-purple-text mb-4">We saw a continuation in the significant
+                                        outperformance of growth vs. value throughout most of 2019, with a sharp
+                                        reversal in September. Discuss your thoughts on the large performance gap
+                                        between growth and value sectors and any forces you think could impact this
+                                        going forward, particularly in the in the small-cap space.</h6>
+
+                                    <p class="cta-gray-text">The Russell 2000® Growth Index has outperformed the Russell
+                                        2000® Value Index through late 2019. Over the past 10 years, growth indexes for
+                                        both small and large Russell and S&P 500 indexes have outperformed value.
+                                        However, for longer time periods, the Russell 2000® Value Index has outperformed
+                                        Growth. For the S&P indexes, growth has outperformed over the last 20+ years.
+                                    </p>
+
+                                    <p class="cta-gray-text">For the past 10 years, growth has been driven by strong
+                                        returns in technology and healthcare, while energy has held back value. Lower
+                                        interest rates may have also contributed to this divergence. Over longer time
+                                        periods, value has outperformed growth, but in the current economic environment
+                                        growth has the edge.</p>
+
+                                    <p class="disclosures-text">All investments are subject to risk. Asset allocation
+                                        and diversification do not ensure a profit or protect against a loss. There is
+                                        no assurance that any investment strategy will be successful or that any
+                                        securities transaction, holdings, sectors or allocations discussed will be
+                                        profitable.</p>
+
+                                    <p class="disclosures-text">This material may include forward-looking statements.
+                                        These statements are not historical facts, but instead represent only beliefs
+                                        regarding future events, many of which, by their nature, are inherently
+                                        uncertain. You should not place undue reliance on forward-looking statements as
+                                        it is possible that actual results and financial conditions may differ, possibly
+                                        materially, from the anticipated results and financial conditions indicated in
+                                        these forward-looking statements.</p>
+
+                                    <p class="disclosures-text">The information contained within does not represent a
+                                        recommendation to buy, hold or sell any security and it should not be assumed
+                                        that the securities transactions or holdings discussed were or will prove to be
+                                        profitable. All holdings are subject to change daily. The information presented
+                                        is not tax, investment or legal advice. Prospective investors should consult
+                                        with their advisors.</p>
+                                    <p class="disclosures-text">The Russell 2000® Growth Index measures the performance
+                                        of the small-cap growth segment of the U.S. equity universe. It includes those
+                                        Russell 2000 companies with higher price-to-book ratios and higher forecasted
+                                        growth values. </p>
+                                    <p class="disclosures-text">The Russell 2000® Value Index measures the performance
+                                        of the small-cap value segment of the U.S. equity universe. It includes those
+                                        Russell 2000 companies with lower price-to-book ratios and lower forecasted
+                                        growth values.</p>
+                                    <p class="disclosures-text">The S&P 500 Index measures change in stock market
+                                        conditions based on the average performance of 500 widely held common stocks. It
+                                        is a market-weighted index calculated on a total return basis with dividend
+                                        reinvested. The S&P 500 represents approximately 75% of the investable U.S.
+                                        equity market. </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--End Modal-->
+
+    </section>
+    <section class="section-downloads">
+        <div class="container">
+            <h3 class="text-center">
+                <a href="https://www.carillontower.com/-/media/rj/affiliate-sites/carillon-tower/pdfs/partner-perspectives-2020-outlook-cta.pdf?la=en"
+                    target="_blank" class="text-uppercase readmore-link download-outlook"><strong>download our complete
+                        2020
+                        outlook <em class="fa fa-chevron-right"></em></strong></a>
+            </h3>
+            <p class="text-center">Read insights from all 11 portfolio teams.</p>
+        </div>
+    </section>
+    <section class="section-insights">
+        <div class="container">
+            <h2 class="text-center"> <a class="readmore-link download-outlook" data-toggle="modal"
+                    data-target="#eloquaModal"><strong>Contact us</strong></a> if
+                you would like
+                to learn more
+                about our insights and solutions</h2>
+        </div>
+        <!--Start Modal-->
+        <div class="modal fade" id="eloquaModal" tabindex="-1" role="dialog" aria-labelledby="eloquaModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <h5 style="color:#243746;text-align:center;font-size:1.25rem"><strong>Please enter your contact
+                                information.</strong></h5>
+                        <p class="cta-gray-text text-center">One of our sales professionals will be<br /> in touch with
+                            you
+                            soon.</p>
+                        <!--Start Eloqua Form-->
+                        <style type="text/css" media="screen">
+
+                        </style>
+                        <div>
+                            <form method="post" name="partnerperspectives157004627832-63711073423717833-"
+                                action="https://s1473852668.t.eloqua.com/e/f2" onsubmit="return handleFormSubmit(this)"
+                                id="form69" class="elq-form">
+                                <input value="partnerperspectives157004627832-63711073423717833-" type="hidden"
+                                    name="elqFormName" />
+                                <input value="1473852668" type="hidden" name="elqSiteId" />
+                                <input name="elqCampaignId" type="hidden" />
+                                <div id="formElement0"
+                                    class="sc-view form-design-field sc-static-layout item-padding sc-regular-size">
+                                    <div class="field-wrapper">
+                                    </div>
+                                    <div class="individual field-wrapper">
+                                        <div class="_100 field-style">
+                                            <p class="field-p">
+                                                <label for="field0" class="label-position top"
+                                                    style="color:#243746;">Full
+                                                    Name
+                                                    <span class="required">*
+                                                    </span>
+                                                </label>
+                                                <input id="field0" name="fullName1" type="text" style="width:100%"
+                                                    value="" class="field-size-top-large" />
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="formElement1"
+                                    class="sc-view form-design-field sc-static-layout item-padding sc-regular-size">
+                                    <div class="field-wrapper">
+                                    </div>
+                                    <div class="individual field-wrapper">
+                                        <div class="_100 field-style">
+                                            <p class="field-p">
+                                                <label for="field1" class="label-position top"
+                                                    style="color:#243746;">Email
+                                                    Address
+                                                    <span class="required">*
+                                                    </span>
+                                                </label>
+                                                <input id="field1" name="emailAddress" type="text" style="width:100%"
+                                                    value="" class="field-size-top-large" />
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="formElement2"
+                                    class="sc-view form-design-field sc-static-layout item-padding sc-regular-size">
+                                    <div class="field-wrapper">
+                                    </div>
+                                    <div class="individual field-wrapper">
+                                        <div class="_100 field-style">
+                                            <p class="field-p">
+                                                <input type="submit" value="Submit"
+                                                    class="submit-button btn btn-primary"
+                                                    style="font-size: 100%; height: 40px; width: 100%;font-weight: bold; background-color:#243746;border-color:#243746" />
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                            <script src="https://img04.en25.com/i/livevalidation_standalone.compressed.js"
+                                type="text/javascript">
+                            </script>
+                            <style type="text/css" media="screen">
+                                .elq-form .loader {
+                                    vertical-align: middle;
+                                    display: inline-block;
+                                    margin-left: 10px;
+                                    border: 3px solid #f3f3f3;
+                                    border-radius: 50%;
+                                    border-top: 3px solid #3498db;
+                                    width: 20px;
+                                    height: 20px;
+                                    -webkit-animation: spin 2s linear infinite;
+                                    animation: spin 2s linear infinite;
+                                }
+
+                                @-webkit-keyframes spin {
+                                    0% {
+                                        -webkit-transform: rotate(0deg);
+                                    }
+
+                                    100% {
+                                        -webkit-transform: rotate(360deg);
+                                    }
+                                }
+
+                                @keyframes spin {
+                                    0% {
+                                        transform: rotate(0deg);
+                                    }
+
+                                    100% {
+                                        transform: rotate(360deg);
+                                    }
+                                }
+
+                                .LV_validation_message {
+                                    font-weight: bold;
+                                    margin: 0 0 0 5px;
+                                }
+
+                                .LV_valid {
+                                    color: #00CC00;
+                                    display: none;
+                                }
+
+                                .LV_invalid {
+                                    color: #CC0000;
+                                    font-size: 10px;
+                                }
+
+                                .LV_valid_field,
+                                input.LV_valid_field:hover,
+                                input.LV_valid_field:active,
+                                textarea.LV_valid_field:hover,
+                                textarea.LV_valid_field:active {
+                                    outline: 1px solid #00CC00;
+                                }
+
+                                .LV_invalid_field,
+                                input.LV_invalid_field:hover,
+                                input.LV_invalid_field:active,
+                                textarea.LV_invalid_field:hover,
+                                textarea.LV_invalid_field:active {
+                                    outline: 1px solid #CC0000;
+                                }
+                            </style>
+                            <script type="text/javascript">
+                                var dom0 = document.querySelector('#form69 #field0');
+                                var field0 = new LiveValidation(dom0, {
+                                    validMessage: "",
+                                    onlyOnBlur: false,
+                                    wait: 300
+                                });
+                                field0.add(Validate.Custom, {
+                                    against: function (value) {
+                                        return !value.match(/(<([^>]+)>)/ig);
+                                    },
+                                    failureMessage: "Value must not contain any HTML"
+                                });
+                                field0.add(Validate.Length, {
+                                    tooShortMessage: "Invalid length for field value",
+                                    tooLongMessage: "Invalid length for field value",
+                                    minimum: 0,
+                                    maximum: 35
+                                });
+                                field0.add(Validate.Presence, {
+                                    failureMessage: "This field is required"
+                                });
+                                var dom1 = document.querySelector('#form69 #field1');
+                                var field1 = new LiveValidation(dom1, {
+                                    validMessage: "",
+                                    onlyOnBlur: false,
+                                    wait: 300
+                                });
+                                field1.add(Validate.Format, {
+                                    pattern: /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i,
+                                    failureMessage: "A valid email address is required"
+                                });
+                                field1.add(Validate.Presence, {
+                                    failureMessage: "This field is required"
+                                });
+
+                                function handleFormSubmit(ele) {
+                                    var submitButton = ele.querySelector('input[type=submit]');
+                                    var spinner = document.createElement('span');
+                                    spinner.setAttribute('class', 'loader');
+                                    submitButton.setAttribute('disabled', true);
+                                    submitButton.style.cursor = 'wait';
+                                    submitButton.parentNode.appendChild(spinner);
+                                    return true;
+                                }
+
+                                function resetSubmitButton(e) {
+                                    var submitButtons = e.target.form.getElementsByClassName('submit-button');
+                                    for (var i = 0; i < submitButtons.length; i++) {
+                                        submitButtons[i].disabled = false;
+                                    }
+                                }
+
+                                function addChangeHandler(elements) {
+                                    for (var i = 0; i < elements.length; i++) {
+                                        elements[i].addEventListener('change', resetSubmitButton);
+                                    }
+                                }
+                                var form = document.getElementById('form69');
+                                addChangeHandler(form.getElementsByTagName('input'));
+                                addChangeHandler(form.getElementsByTagName('select'));
+                                addChangeHandler(form.getElementsByTagName('textarea'));
+                                var nodes = document.querySelectorAll('#form69 input[data-subscription]');
+                                if (nodes) {
+                                    for (var i = 0, len = nodes.length; i < len; i++) {
+                                        var status = nodes[i].dataset ? nodes[i].dataset.subscription : nodes[i]
+                                            .getAttribute('data-subscription');
+                                        if (status === 'true') {
+                                            nodes[i].checked = true;
+                                        }
+                                    }
+                                };
+                                var nodes = document.querySelectorAll('#form69 select[data-value]');
+                                if (nodes) {
+                                    for (var i = 0; i < nodes.length; i++) {
+                                        var node = nodes[i];
+                                        var selectedValue = node.dataset ? node.dataset.value : node.getAttribute(
+                                            'data-value');
+                                        if (selectedValue) {
+                                            for (var j = 0; j < node.options.length; j++) {
+                                                if (node.options[j].value === selectedValue) {
+                                                    node.options[j].selected = 'selected';
+                                                    break;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            </script>
+                        </div>
+                        <!--End Eloqua Form-->
+
+
+                        <small style="color:#808084;text-align:center;margin-left:20%">Will be used in accordance with
+                            our <a href="https://www.carillontower.com/our-firm/privacy-policy" target="_blank"
+                                style="color:#808084;text-decoration:underline;">privacy
+                                policy</a></small>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!--End Modal-->
+
+    </section>
+    <section class="section-affiliates">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3 class="text-center partner-purple-text"><strong>Our Affiliates</strong></h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="d-block mx-auto">
+                    <img class="mr-lg-4" src="images/clarivest-logo.png" alt="ClariVest Asset Management">
+                    <img class="mr-lg-4" src="images/cougar-logo.png" alt="Cougar Global Investments">
+                    <img class="mr-lg-4" src="images/eagle-logo.png" alt="Eagle Asset Management">
+                    <img class="mr-lg-4" src="images/reams-logo.png" alt="Reams Asset Management">
+                    <img src="images/scout-logo.png" alt="Scout Investments">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section-disclosures">
+        <div class="container">
+            <div class="row">
+                <hr>
+                <p class="mt-3"><strong>Disclosure and Definitions</strong></p>
+                <p class="mb-5">All investments are subject to risk. Asset allocation and diversification do not ensure
+                    a profit or
+                    protect against a loss. There is no assurance that any investment strategy will be successful or
+                    that any securities transaction, holdings, sectors or allocations discussed will be profitable. P/E
+                    ratio measures a company's current share price relative to its per-share earnings. The term premium
+                    is the premium an investor requires to offset the risk of an unfortunate loss due to a sudden spike
+                    in interest rates.</p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="nav justify-content-center">
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://www.linkedin.com/company/carillontower"
+                                target="_blank">Follow us &nbsp;<img src="images/linkedin-icon.png"
+                                    alt="Follow us on LinkedIn"></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://twitter.com/carillon_tower" target="_blank"><img
+                                    src="images/twitter-icon.png" alt="Follow Us On Twitter"> </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://www.carillontower.com/our-firm/privacy-policy"
+                                target="_blank">Privacy Policy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link"
+                                href="https://www.carillontower.com/-/media/rj/affiliate-sites/carillon-tower/homepage/pdfs/cta_adv_brochure_-2a-2b.pdf"
+                                target="_blank">ADV</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link"
+                                href="https://www.raymondjames.com/legal-disclosures/business-continuity-planning-disclosure-statement"
+                                target="_blank">BCP</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://www.carillontower.com/contact-us" target="_blank">Contact
+                                Us</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="row">
+                <p class="mt-2">©2020 Carillon Tower Advisers, Inc. All rights reserved. Carillon Tower Advisers is the
+                    trade name
+                    for
+                    Carillon Tower Advisers, Inc., an investment adviser registered with the U.S. Securities and
+                    Exchange
+                    Commission (SEC). ClariVest Asset Management LLC, Eagle Asset Management, Inc. and Scout Investments
+                    are
+                    registered investment advisers with the SEC. Reams Asset Management is a division of Scout
+                    Investments.
+                    Cougar Global Investments LLC is registered as a Portfolio Manager with the Ontario Securities
+                    Commission (OSC) and with the SEC as a Non-Resident Investment Advisor. All five entities are
+                    affiliates
+                    of Carillon Tower Advisers. All third-party marks are the property of their respective owners.</p>
+            </div>
+
+        </div>
+        <script>
+            /*Pure JS DocReady */
+            function docReady(fn) {
+                // see if DOM is already available
+                if (document.readyState === "complete" || document.readyState === "interactive") {
+                    // call on next available tick
+                    setTimeout(fn, 1);
+                } else {
+                    document.addEventListener("DOMContentLoaded", fn);
+                }
+            }
+
+            /*Tracking Pixel */
+            docReady(function () {
+
+                buttons = document.querySelectorAll('.download-outlook');
+                buttons.forEach(function (elem) {
+                    elem.addEventListener('click', function (e) {
+                        /* e.preventDefault();*/
+                        e = e || window.event;
+                        var target = e.target || e.srcElement;
+                        var img = document.createElement('img');
+                        img.setAttribute('src',
+                            'https://www.dianomi.com/pixeltrack.pl?t=carillon.conversion'
+                        );
+                        img.setAttribute('width', '1');
+                        img.setAttribute('height', '1');
+                        img.setAttribute('style', "display:none;");
+                        document.body.appendChild(img);
+                    }, false);
+                });
+            });
+
+            /*Custom Parallax */
+
+            window.addEventListener('scroll', function (e) {
+                const target = document.querySelector('.scroll');
+                /*console.log(target.style);*/
+
+                var scrolled = window.pageYOffset;
+                var rate = scrolled * 0.3;
+                target.style.transform = 'translate3d(0px, ' + rate + 'px, 0px)';
+            });
+        </script>
+        <script>
+            docReady(function () {
+                AOS.init();
+            });
+        </script>
+        <!--Parallax Library-->
+
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.10.0/rellax.js"></script>
+        <script>
+            var rellax = new Rellax('.rellax', {
+                speed: 4
+            });
+        </script>
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+        </script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+        </script>
+    </footer>
+
+</body>
+
+</html>
