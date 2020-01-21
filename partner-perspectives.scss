@@ -1,0 +1,624 @@
+/*Variables and Colors */
+$light-purple:#EFECEE;
+$partner-purple:#674459;
+$cta-orange:#F4B223;
+$navy-blue:#243746;
+$light-blue:#7AA5BA;
+$cta-grey1:#909D9E;
+$cta-grey2:#808084;
+$cta-grey3:#707070;
+$cta-grey4:#7A888C;
+$cta-steel:#A8B8B4;
+
+/* Responsive Mixins */
+@mixin for-phone-only {
+    @media (max-width: 599px) {
+        @content;
+    }
+}
+
+@mixin for-tablet-portrait-up {
+    @media (min-width: 600px) {
+        @content;
+    }
+}
+
+@mixin for-tablet-landscape-up {
+    @media (min-width: 900px) {
+        @content;
+    }
+}
+
+@mixin for-tablet-tablet-down {
+    @media (max-width: 1100px) {
+        @content;
+    }
+}
+
+@mixin reg-tablet-down {
+    @media (max-width: 48em) {
+        @content;
+    }
+}
+
+@mixin for-desktop {
+    @media (min-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin for-large-desktop {
+    @media (min-width: 1400px) {
+        @content;
+    }
+}
+
+@mixin xl-large-desktop {
+    @media (min-width: 1600px) {
+        @content;
+    }
+}
+
+/*Functions */
+/*Typography and FontSize Function */
+@function remCalc($size) {
+    $remSize: $size/16px;
+    @return #{$remSize}rem;
+}
+
+@mixin fontSize($size) {
+    font-size: $size; //Fallback in px
+    font-size: remCalc($size);
+}
+
+/*End Functions */
+
+/*Boostrap Overrides */
+@media(min-width:1600px) {
+    .container {
+        max-width: 1440px;
+    }
+}
+
+
+/*Text*/
+.partner-purple-text {
+    color: $partner-purple;
+}
+
+.cta-gray-text {
+    color: $cta-grey2;
+}
+
+.cta-steel-text {
+    color: $cta-steel;
+}
+
+.text-blue {
+    color: $navy-blue;
+}
+
+.cta-blue-bg {
+    background: $navy-blue;
+}
+
+.disclosures-text {
+    @include fontSize(14px);
+    color: $cta-grey1;
+}
+
+
+
+/* Backgrounds */
+.partner-purple-bg {
+    background-color: $partner-purple;
+}
+
+.background-grey {
+    background-color: $cta-grey4;
+}
+
+/*Links*/
+
+a.readmore-link {
+    color: $cta-orange;
+
+    &:visited,
+    &:active,
+    &:hover {
+        color: $cta-orange;
+    }
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: $navy-blue;
+    color: #fff;
+}
+
+.partner-perspectives {
+    font-family: 'Roboto', sans-serif;
+
+    .shadow-lg {
+        box-shadow: 0 12px 30px rgba(0, 0, 0, .5) !important;
+    }
+
+    header {
+        letter-spacing: 0.1px;
+    }
+
+    .modal-header {
+        border-bottom: 0;
+    }
+
+    .modal-body {
+        h5 {
+            @include fontSize(48px);
+        }
+
+        h6 {
+            @include fontSize(34px);
+            line-height: 1.25;
+            letter-spacing: 0.1px;
+        }
+
+        p,
+        h6 {
+            max-width: remCalc(720px);
+        }
+
+        p {
+            line-height: 1.65;
+            letter-spacing: 0.1px;
+        }
+    }
+
+    .sc-navigation {
+        @include for-tablet-tablet-down {
+            background-size: cover;
+        }
+    }
+
+
+    .jumbotron {
+        background: url(../images/hero-partner-perspectives.png);
+        background-position: center;
+        border-radius: 0;
+
+        hr {
+            border-top: 4px solid $cta-orange;
+            width: 154px;
+        }
+
+        h1 {
+            @include for-tablet-landscape-up {
+                margin-top: 7rem;
+            }
+
+            @include reg-tablet-down {
+                margin-top: 10rem;
+            }
+        }
+
+        @include for-desktop {
+            height: 600px;
+
+            h1 {
+                @include fontSize(84px);
+            }
+
+            h2 {
+                @include fontSize(60px);
+            }
+        }
+    }
+
+    .card {
+        h5 {
+            @include fontSize(18px);
+        }
+
+        @include for-tablet-tablet-down {
+            margin-bottom: 2rem;
+        }
+
+        @include xl-large-desktop {
+            padding: 2rem;
+        }
+    }
+
+    footer {
+        background-color: $partner-purple;
+        color: #fff;
+        padding: 2rem;
+        letter-spacing: 0.1px;
+
+        p {
+            @include fontSize(14px);
+        }
+
+        a.nav-link {
+            color: #fff;
+        }
+    }
+}
+
+/* Sections */
+
+.section-intro-text {
+    letter-spacing: 0.1px;
+
+    h3 {
+        @include fontSize(36px);
+    }
+
+    p {
+        @include fontSize(26px);
+    }
+}
+
+.section-insights {
+    background-color: $cta-grey4;
+    padding-top: remCalc(30px);
+    padding-bottom: remCalc(30px);
+    letter-spacing: 0.1px;
+
+    h2 {
+        @include fontSize(32px);
+    }
+
+    @include for-desktop {
+        h2 {
+            max-width: 1097px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    a {
+        color: $cta-orange;
+        text-decoration: none;
+
+        &:active,
+        &:visited {
+            color: $cta-orange;
+        }
+    }
+
+
+}
+
+.section-volatility,
+.section-federal-reserve,
+.section-growth,
+.section-elections,
+.section-trade-war {
+    letter-spacing: 0.1px;
+    padding-top: remCalc(80px);
+    padding-bottom: remCalc(140px);
+
+    @include for-phone-only {
+        padding-bottom: 0;
+    }
+}
+
+
+.section-volatility {
+    background: url(../images/Volatility-bg.png);
+    background-repeat: no-repeat;
+
+    @include reg-tablet-down {
+        h2 {
+            text-align: center;
+        }
+    }
+
+    .modal-card {
+        background-color: $light-purple;
+    }
+
+    @include for-desktop {
+        .modal-card {
+            img {
+                max-width: 155px;
+            }
+        }
+    }
+
+    @include for-desktop {
+        .card {
+            min-height: remCalc(245px);
+        }
+    }
+
+    @include xl-large-desktop {
+        .quote-card {
+            background: url(../images/quote-image.png) #fff;
+            background-repeat: no-repeat;
+            background-position: 10px 20px;
+
+        }
+
+        .modal-card {
+            background: url(../images/quote-image.png) $light-purple;
+            background-repeat: no-repeat;
+            background-position: -11px 93px;
+            padding-top: 10px;
+            padding-bottom: 1rem;
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        .card {
+            &:first-child {
+                min-height: remCalc(285px);
+            }
+        }
+    }
+
+}
+
+.section-elections {
+    background: url(../images/elections-bg.png);
+    background-repeat: no-repeat;
+
+    .modal-card {
+        background-color: $light-purple;
+    }
+
+    @include for-desktop {
+        .modal-card {
+            img {
+                max-width: 155px;
+            }
+        }
+    }
+
+    @include for-desktop {
+        .card {
+            min-height: remCalc(271px);
+        }
+    }
+
+    @include xl-large-desktop {
+        .quote-card {
+            background: url(../images/quote-image.png) #fff;
+            background-repeat: no-repeat;
+            background-position: 10px 20px;
+        }
+
+        .modal-card {
+            background: url(../images/quote-image.png) $light-purple;
+            background-repeat: no-repeat;
+            background-position: -11px 93px;
+            padding-top: 10px;
+            padding-bottom: 1rem;
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        .card {
+            &:nth-child(1) {
+                min-height: remCalc(330px);
+            }
+        }
+    }
+}
+
+.section-growth {
+    background: url(../images/growth-bg.png);
+    background-repeat: no-repeat;
+
+    .modal-card {
+        background-color: $light-purple;
+    }
+
+    @include for-desktop {
+        .modal-card {
+            img {
+                max-width: 155px;
+            }
+        }
+    }
+
+    @include for-desktop {
+        .card {
+            min-height: remCalc(292px);
+        }
+    }
+
+    @include xl-large-desktop {
+        .quote-card {
+            background: url(../images/quote-image.png) #fff;
+            background-repeat: no-repeat;
+            background-position: 10px 20px;
+        }
+
+        .modal-card {
+            background: url(../images/quote-image.png) $light-purple;
+            background-repeat: no-repeat;
+            background-position: -11px 93px;
+            padding-top: 10px;
+            padding-bottom: 1rem;
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        .card {
+            &:first-child {
+                min-height: remCalc(330px);
+            }
+        }
+    }
+}
+
+.section-federal-reserve {
+    background: url(../images/federal-reserve-bg.png);
+    background-repeat: no-repeat;
+
+    .modal-card {
+        background-color: $light-purple;
+    }
+
+    @include for-desktop {
+        .modal-card {
+            img {
+                max-width: 155px;
+            }
+        }
+    }
+
+    @include reg-tablet-down {
+        margin-bottom: 4rem;
+    }
+
+    @include for-desktop {
+        margin-bottom: remCalc(300px);
+    }
+
+    @include for-desktop {
+        .card {
+            min-height: remCalc(316px);
+        }
+    }
+
+    @include xl-large-desktop {
+        .quote-card {
+            background: url(../images/quote-image.png) #fff;
+            background-repeat: no-repeat;
+            background-position: 10px 20px;
+        }
+
+        .modal-card {
+            background: url(../images/quote-image.png) $light-purple;
+            background-repeat: no-repeat;
+            background-position: -11px 93px;
+            padding-top: 10px;
+            padding-bottom: 1rem;
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        .card {
+            &:first-child {
+                min-height: remCalc(353px);
+            }
+        }
+    }
+}
+
+.section-trade-war {
+    background: url(../images/tradewar-bg.png);
+    background-repeat: no-repeat;
+
+    .modal-card {
+        background-color: $light-purple;
+
+        img {
+            max-width: 100%;
+        }
+    }
+
+    @include for-desktop {
+        .modal-card {
+            img {
+                max-width: 155px;
+            }
+        }
+    }
+
+    @include for-desktop {
+        .card {
+            min-height: remCalc(268px);
+        }
+    }
+
+    @include xl-large-desktop {
+        .quote-card {
+            background: url(../images/quote-image.png) #fff;
+            background-repeat: no-repeat;
+            background-position: 10px 20px;
+        }
+
+        .modal-card {
+            background: url(../images/quote-image.png) $light-purple;
+            background-repeat: no-repeat;
+            background-position: -11px 95px;
+            padding-top: 10px;
+            padding-bottom: 1rem;
+            padding-left: 0;
+            padding-right: 0;
+
+            /* &:first-child {
+                background-position: -11px 106px;
+            }*/
+        }
+
+        .card {
+            &:nth-child(1) {
+                min-height: remCalc(332px);
+            }
+        }
+    }
+}
+
+.section-downloads {
+    letter-spacing: 0.1px;
+
+    @include for-desktop {
+        margin-top: remCalc(100px);
+        margin-bottom: remCalc(140px);
+    }
+
+}
+
+.section-affiliates {
+    background-color: #fff;
+    padding-top: remCalc(60px);
+    padding-bottom: remCalc(90px);
+    letter-spacing: 0.1px;
+
+    @include for-phone-only {
+        img {
+            margin-left: 20vw;
+            margin-bottom: 2rem;
+
+            &:first-child {
+                margin-top: 2rem;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    @include for-desktop {
+        img {
+            max-width: 155px;
+        }
+    }
+}
+
+.section-disclosures {
+    background-color: #fff;
+    color: $cta-grey1;
+    letter-spacing: 0.1px;
+
+    @include for-phone-only {
+        padding: 2rem;
+    }
+
+    hr {
+        border-top: 2px ridge;
+        width: 100%;
+    }
+
+    p {
+        @include fontSize(14px);
+    }
+}
